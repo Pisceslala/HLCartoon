@@ -21,7 +21,13 @@
     
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
-    
+    UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
+    flow.itemSize = CGSizeMake(SSScreenW / 2 - 10, 370 /2);
+    flow.minimumInteritemSpacing = 3;
+    flow.minimumLineSpacing = 5;
+    self.collectionView.contentInset = UIEdgeInsetsMake(0, 5, 0, 5);
+    self.collectionView.scrollEnabled = NO;
+    self.collectionView.collectionViewLayout = flow;
     [self.collectionView registerNib:[UINib nibWithNibName:@"HLBaseCollectionCell" bundle:nil] forCellWithReuseIdentifier:@"cell"];
 }
 

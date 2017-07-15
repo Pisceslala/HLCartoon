@@ -36,6 +36,10 @@
 		23D011D51F1A0B3F007968F0 /* UIView+JYDFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D011BD1F1A0B3F007968F0 /* UIView+JYDFrame.m */; };
 		23D011D61F1A0B3F007968F0 /* HLSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D011C11F1A0B3F007968F0 /* HLSettingViewController.m */; };
 		23D011DC1F1A0BC4007968F0 /* Const.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D011DA1F1A0BC4007968F0 /* Const.m */; };
+		23D011E11F1A12F8007968F0 /* HLHorribleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D011DF1F1A12F8007968F0 /* HLHorribleCell.m */; };
+		23D011E21F1A12F8007968F0 /* HLHorribleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23D011E01F1A12F8007968F0 /* HLHorribleCell.xib */; };
+		23D011E61F1A194F007968F0 /* HLHorribleDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D011E41F1A194F007968F0 /* HLHorribleDetailCell.m */; };
+		23D011E71F1A194F007968F0 /* HLHorribleDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23D011E51F1A194F007968F0 /* HLHorribleDetailCell.xib */; };
 		94D85C1C9B4B25B0D98242B5 /* libPods-HLCartoon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0739EA5CF57AEDAE7A79ECA8 /* libPods-HLCartoon.a */; };
 /* End PBXBuildFile section */
 
@@ -112,6 +116,12 @@
 		23D011D91F1A0BC4007968F0 /* Const.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Const.h; sourceTree = "<group>"; };
 		23D011DA1F1A0BC4007968F0 /* Const.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Const.m; sourceTree = "<group>"; };
 		23D011DB1F1A0BC4007968F0 /* HLPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLPrefixHeader.pch; sourceTree = "<group>"; };
+		23D011DE1F1A12F8007968F0 /* HLHorribleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLHorribleCell.h; sourceTree = "<group>"; };
+		23D011DF1F1A12F8007968F0 /* HLHorribleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLHorribleCell.m; sourceTree = "<group>"; };
+		23D011E01F1A12F8007968F0 /* HLHorribleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HLHorribleCell.xib; sourceTree = "<group>"; };
+		23D011E31F1A194F007968F0 /* HLHorribleDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLHorribleDetailCell.h; sourceTree = "<group>"; };
+		23D011E41F1A194F007968F0 /* HLHorribleDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLHorribleDetailCell.m; sourceTree = "<group>"; };
+		23D011E51F1A194F007968F0 /* HLHorribleDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HLHorribleDetailCell.xib; sourceTree = "<group>"; };
 		6FD6C28B141BE71906DF7DA0 /* Pods-HLCartoon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HLCartoon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HLCartoon/Pods-HLCartoon.debug.xcconfig"; sourceTree = "<group>"; };
 		E4D1BDEFC89042149B406F8F /* Pods-HLCartoon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HLCartoon.release.xcconfig"; path = "Pods/Target Support Files/Pods-HLCartoon/Pods-HLCartoon.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -169,11 +179,6 @@
 			children = (
 				23D0118B1F1A0B3F007968F0 /* Classes */,
 				23D011D71F1A0BC4007968F0 /* Source */,
-				23D0115E1F1A0AEC007968F0 /* Main.storyboard */,
-				23D011641F1A0AEC007968F0 /* Assets.xcassets */,
-				23D011661F1A0AEC007968F0 /* LaunchScreen.storyboard */,
-				23D011691F1A0AEC007968F0 /* Info.plist */,
-				23D011611F1A0AEC007968F0 /* HLCartoon.xcdatamodeld */,
 				23D011551F1A0AEC007968F0 /* Supporting Files */,
 			);
 			path = HLCartoon;
@@ -182,6 +187,11 @@
 		23D011551F1A0AEC007968F0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				23D0115E1F1A0AEC007968F0 /* Main.storyboard */,
+				23D011641F1A0AEC007968F0 /* Assets.xcassets */,
+				23D011661F1A0AEC007968F0 /* LaunchScreen.storyboard */,
+				23D011691F1A0AEC007968F0 /* Info.plist */,
+				23D011611F1A0AEC007968F0 /* HLCartoon.xcdatamodeld */,
 				23D011561F1A0AEC007968F0 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -279,7 +289,9 @@
 		23D0119E1F1A0B3F007968F0 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				23D0119F1F1A0B3F007968F0 /* Funny */,
+				23D0119F1F1A0B3F007968F0 /* Funny - 爆笑 */,
+				23D011AA1F1A0B3F007968F0 /* LoveCell - 恋爱 */,
+				23D011DD1F1A12C8007968F0 /* HorribleCell - 灵异 */,
 				23D011A31F1A0B3F007968F0 /* HLBannersView.h */,
 				23D011A41F1A0B3F007968F0 /* HLBannersView.m */,
 				23D011A51F1A0B3F007968F0 /* HLBaseCell.h */,
@@ -287,22 +299,22 @@
 				23D011A71F1A0B3F007968F0 /* HLBaseCollectionCell.h */,
 				23D011A81F1A0B3F007968F0 /* HLBaseCollectionCell.m */,
 				23D011A91F1A0B3F007968F0 /* HLBaseCollectionCell.xib */,
-				23D011AA1F1A0B3F007968F0 /* LoveCell */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		23D0119F1F1A0B3F007968F0 /* Funny */ = {
+		23D0119F1F1A0B3F007968F0 /* Funny - 爆笑 */ = {
 			isa = PBXGroup;
 			children = (
 				23D011A01F1A0B3F007968F0 /* HLFunnyCell.h */,
 				23D011A11F1A0B3F007968F0 /* HLFunnyCell.m */,
 				23D011A21F1A0B3F007968F0 /* HLFunnyCell.xib */,
 			);
+			name = "Funny - 爆笑";
 			path = Funny;
 			sourceTree = "<group>";
 		};
-		23D011AA1F1A0B3F007968F0 /* LoveCell */ = {
+		23D011AA1F1A0B3F007968F0 /* LoveCell - 恋爱 */ = {
 			isa = PBXGroup;
 			children = (
 				23D011AB1F1A0B3F007968F0 /* HLLoveCell.h */,
@@ -312,6 +324,7 @@
 				23D011AF1F1A0B3F007968F0 /* HLLoveDetailCell.m */,
 				23D011B01F1A0B3F007968F0 /* HLLoveDetailCell.xib */,
 			);
+			name = "LoveCell - 恋爱";
 			path = LoveCell;
 			sourceTree = "<group>";
 		};
@@ -394,6 +407,20 @@
 				23D011DA1F1A0BC4007968F0 /* Const.m */,
 			);
 			path = Const;
+			sourceTree = "<group>";
+		};
+		23D011DD1F1A12C8007968F0 /* HorribleCell - 灵异 */ = {
+			isa = PBXGroup;
+			children = (
+				23D011DE1F1A12F8007968F0 /* HLHorribleCell.h */,
+				23D011DF1F1A12F8007968F0 /* HLHorribleCell.m */,
+				23D011E01F1A12F8007968F0 /* HLHorribleCell.xib */,
+				23D011E31F1A194F007968F0 /* HLHorribleDetailCell.h */,
+				23D011E41F1A194F007968F0 /* HLHorribleDetailCell.m */,
+				23D011E51F1A194F007968F0 /* HLHorribleDetailCell.xib */,
+			);
+			name = "HorribleCell - 灵异";
+			path = HorribleCell;
 			sourceTree = "<group>";
 		};
 		2631D9A16C7284EC43773BE4 /* Pods */ = {
@@ -524,12 +551,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23D011E71F1A194F007968F0 /* HLHorribleDetailCell.xib in Resources */,
 				23D011C91F1A0B3F007968F0 /* HLFunnyCell.xib in Resources */,
 				23D011D11F1A0B3F007968F0 /* HLLoveDetailCell.xib in Resources */,
 				23D011681F1A0AEC007968F0 /* LaunchScreen.storyboard in Resources */,
 				23D011651F1A0AEC007968F0 /* Assets.xcassets in Resources */,
 				23D011CD1F1A0B3F007968F0 /* HLBaseCollectionCell.xib in Resources */,
 				23D011601F1A0AEC007968F0 /* Main.storyboard in Resources */,
+				23D011E21F1A12F8007968F0 /* HLHorribleCell.xib in Resources */,
 				23D011CF1F1A0B3F007968F0 /* HLLoveCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -612,8 +641,10 @@
 				23D011D51F1A0B3F007968F0 /* UIView+JYDFrame.m in Sources */,
 				23D011C71F1A0B3F007968F0 /* HLSuggestionModel.m in Sources */,
 				23D011C61F1A0B3F007968F0 /* HLDetailModel.m in Sources */,
+				23D011E61F1A194F007968F0 /* HLHorribleDetailCell.m in Sources */,
 				23D011D61F1A0B3F007968F0 /* HLSettingViewController.m in Sources */,
 				23D011571F1A0AEC007968F0 /* main.m in Sources */,
+				23D011E11F1A12F8007968F0 /* HLHorribleCell.m in Sources */,
 				23D011C21F1A0B3F007968F0 /* AppDelegate.m in Sources */,
 				23D011D01F1A0B3F007968F0 /* HLLoveDetailCell.m in Sources */,
 				23D011CC1F1A0B3F007968F0 /* HLBaseCollectionCell.m in Sources */,

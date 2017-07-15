@@ -14,6 +14,7 @@
 #import "HLFunnyCell.h"
 #import "HLBaseCell.h"
 #import "HLSessionManager.h"
+#import "HLHorribleCell.h"
 @interface HLHomeViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *listView;
@@ -46,6 +47,7 @@
     
     [self.listView registerNib:[UINib nibWithNibName:@"HLLoveCell" bundle:nil] forCellReuseIdentifier:@"loveCell"];
     [self.listView registerNib:[UINib nibWithNibName:@"HLFunnyCell" bundle:nil] forCellReuseIdentifier:@"funnyCell"];
+    [self.listView registerNib:[UINib nibWithNibName:@"HLHorribleCell" bundle:nil] forCellReuseIdentifier:@"horribleCell"];
     
 }
 
@@ -68,6 +70,11 @@
     }else if (indexPath.section == 1) {
         HLFunnyCell *cell = [tableView dequeueReusableCellWithIdentifier:@"funnyCell"];
         HLSuggestionModel *model = self.suggestion[3];
+        cell.model = model;
+        return cell;
+    }else if (indexPath.section == 2) {
+        HLHorribleCell *cell = [tableView dequeueReusableCellWithIdentifier:@"horribleCell"];
+        HLSuggestionModel *model = self.suggestion[1];
         cell.model = model;
         return cell;
     }
@@ -103,7 +110,9 @@
     if (indexPath.section == 0) {
         return 240;
     }else if (indexPath.section == 1) {
-        return 400;
+        return 410;
+    }else if (indexPath.section == 2) {
+        return 750;
     }
     return 64;
 }
