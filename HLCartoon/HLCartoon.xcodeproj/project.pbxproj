@@ -1,0 +1,903 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		23D011571F1A0AEC007968F0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D011561F1A0AEC007968F0 /* main.m */; };
+		23D011601F1A0AEC007968F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23D0115E1F1A0AEC007968F0 /* Main.storyboard */; };
+		23D011631F1A0AEC007968F0 /* HLCartoon.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 23D011611F1A0AEC007968F0 /* HLCartoon.xcdatamodeld */; };
+		23D011651F1A0AEC007968F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23D011641F1A0AEC007968F0 /* Assets.xcassets */; };
+		23D011681F1A0AEC007968F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23D011661F1A0AEC007968F0 /* LaunchScreen.storyboard */; };
+		23D011731F1A0AEC007968F0 /* HLCartoonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D011721F1A0AEC007968F0 /* HLCartoonTests.m */; };
+		23D0117E1F1A0AEC007968F0 /* HLCartoonUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D0117D1F1A0AEC007968F0 /* HLCartoonUITests.m */; };
+		23D011C21F1A0B3F007968F0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D0118E1F1A0B3F007968F0 /* AppDelegate.m */; };
+		23D011C31F1A0B3F007968F0 /* HLBookRackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D011921F1A0B3F007968F0 /* HLBookRackViewController.m */; };
+		23D011C41F1A0B3F007968F0 /* HLHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D011961F1A0B3F007968F0 /* HLHomeViewController.m */; };
+		23D011C51F1A0B3F007968F0 /* HLBannersModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D011991F1A0B3F007968F0 /* HLBannersModel.m */; };
+		23D011C61F1A0B3F007968F0 /* HLDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D0119B1F1A0B3F007968F0 /* HLDetailModel.m */; };
+		23D011C71F1A0B3F007968F0 /* HLSuggestionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D0119D1F1A0B3F007968F0 /* HLSuggestionModel.m */; };
+		23D011C81F1A0B3F007968F0 /* HLFunnyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D011A11F1A0B3F007968F0 /* HLFunnyCell.m */; };
+		23D011C91F1A0B3F007968F0 /* HLFunnyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23D011A21F1A0B3F007968F0 /* HLFunnyCell.xib */; };
+		23D011CA1F1A0B3F007968F0 /* HLBannersView.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D011A41F1A0B3F007968F0 /* HLBannersView.m */; };
+		23D011CB1F1A0B3F007968F0 /* HLBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D011A61F1A0B3F007968F0 /* HLBaseCell.m */; };
+		23D011CC1F1A0B3F007968F0 /* HLBaseCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D011A81F1A0B3F007968F0 /* HLBaseCollectionCell.m */; };
+		23D011CD1F1A0B3F007968F0 /* HLBaseCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23D011A91F1A0B3F007968F0 /* HLBaseCollectionCell.xib */; };
+		23D011CE1F1A0B3F007968F0 /* HLLoveCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D011AC1F1A0B3F007968F0 /* HLLoveCell.m */; };
+		23D011CF1F1A0B3F007968F0 /* HLLoveCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23D011AD1F1A0B3F007968F0 /* HLLoveCell.xib */; };
+		23D011D01F1A0B3F007968F0 /* HLLoveDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D011AF1F1A0B3F007968F0 /* HLLoveDetailCell.m */; };
+		23D011D11F1A0B3F007968F0 /* HLLoveDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23D011B01F1A0B3F007968F0 /* HLLoveDetailCell.xib */; };
+		23D011D21F1A0B3F007968F0 /* HLMainNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D011B41F1A0B3F007968F0 /* HLMainNavController.m */; };
+		23D011D31F1A0B3F007968F0 /* HLMainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D011B61F1A0B3F007968F0 /* HLMainTabBarController.m */; };
+		23D011D41F1A0B3F007968F0 /* HLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D011B91F1A0B3F007968F0 /* HLSessionManager.m */; };
+		23D011D51F1A0B3F007968F0 /* UIView+JYDFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D011BD1F1A0B3F007968F0 /* UIView+JYDFrame.m */; };
+		23D011D61F1A0B3F007968F0 /* HLSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D011C11F1A0B3F007968F0 /* HLSettingViewController.m */; };
+		23D011DC1F1A0BC4007968F0 /* Const.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D011DA1F1A0BC4007968F0 /* Const.m */; };
+		94D85C1C9B4B25B0D98242B5 /* libPods-HLCartoon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0739EA5CF57AEDAE7A79ECA8 /* libPods-HLCartoon.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		23D0116F1F1A0AEC007968F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 23D0114A1F1A0AEC007968F0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 23D011511F1A0AEC007968F0;
+			remoteInfo = HLCartoon;
+		};
+		23D0117A1F1A0AEC007968F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 23D0114A1F1A0AEC007968F0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 23D011511F1A0AEC007968F0;
+			remoteInfo = HLCartoon;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0739EA5CF57AEDAE7A79ECA8 /* libPods-HLCartoon.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HLCartoon.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		23D011521F1A0AEC007968F0 /* HLCartoon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HLCartoon.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		23D011561F1A0AEC007968F0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		23D0115F1F1A0AEC007968F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		23D011621F1A0AEC007968F0 /* HLCartoon.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HLCartoon.xcdatamodel; sourceTree = "<group>"; };
+		23D011641F1A0AEC007968F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		23D011671F1A0AEC007968F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		23D011691F1A0AEC007968F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23D0116E1F1A0AEC007968F0 /* HLCartoonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HLCartoonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		23D011721F1A0AEC007968F0 /* HLCartoonTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLCartoonTests.m; sourceTree = "<group>"; };
+		23D011741F1A0AEC007968F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23D011791F1A0AEC007968F0 /* HLCartoonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HLCartoonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		23D0117D1F1A0AEC007968F0 /* HLCartoonUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLCartoonUITests.m; sourceTree = "<group>"; };
+		23D0117F1F1A0AEC007968F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23D0118D1F1A0B3F007968F0 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		23D0118E1F1A0B3F007968F0 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		23D011911F1A0B3F007968F0 /* HLBookRackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLBookRackViewController.h; sourceTree = "<group>"; };
+		23D011921F1A0B3F007968F0 /* HLBookRackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLBookRackViewController.m; sourceTree = "<group>"; };
+		23D011951F1A0B3F007968F0 /* HLHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLHomeViewController.h; sourceTree = "<group>"; };
+		23D011961F1A0B3F007968F0 /* HLHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLHomeViewController.m; sourceTree = "<group>"; };
+		23D011981F1A0B3F007968F0 /* HLBannersModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLBannersModel.h; sourceTree = "<group>"; };
+		23D011991F1A0B3F007968F0 /* HLBannersModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLBannersModel.m; sourceTree = "<group>"; };
+		23D0119A1F1A0B3F007968F0 /* HLDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLDetailModel.h; sourceTree = "<group>"; };
+		23D0119B1F1A0B3F007968F0 /* HLDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLDetailModel.m; sourceTree = "<group>"; };
+		23D0119C1F1A0B3F007968F0 /* HLSuggestionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLSuggestionModel.h; sourceTree = "<group>"; };
+		23D0119D1F1A0B3F007968F0 /* HLSuggestionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLSuggestionModel.m; sourceTree = "<group>"; };
+		23D011A01F1A0B3F007968F0 /* HLFunnyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLFunnyCell.h; sourceTree = "<group>"; };
+		23D011A11F1A0B3F007968F0 /* HLFunnyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLFunnyCell.m; sourceTree = "<group>"; };
+		23D011A21F1A0B3F007968F0 /* HLFunnyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HLFunnyCell.xib; sourceTree = "<group>"; };
+		23D011A31F1A0B3F007968F0 /* HLBannersView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLBannersView.h; sourceTree = "<group>"; };
+		23D011A41F1A0B3F007968F0 /* HLBannersView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLBannersView.m; sourceTree = "<group>"; };
+		23D011A51F1A0B3F007968F0 /* HLBaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLBaseCell.h; sourceTree = "<group>"; };
+		23D011A61F1A0B3F007968F0 /* HLBaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLBaseCell.m; sourceTree = "<group>"; };
+		23D011A71F1A0B3F007968F0 /* HLBaseCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLBaseCollectionCell.h; sourceTree = "<group>"; };
+		23D011A81F1A0B3F007968F0 /* HLBaseCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLBaseCollectionCell.m; sourceTree = "<group>"; };
+		23D011A91F1A0B3F007968F0 /* HLBaseCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HLBaseCollectionCell.xib; sourceTree = "<group>"; };
+		23D011AB1F1A0B3F007968F0 /* HLLoveCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLLoveCell.h; sourceTree = "<group>"; };
+		23D011AC1F1A0B3F007968F0 /* HLLoveCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLLoveCell.m; sourceTree = "<group>"; };
+		23D011AD1F1A0B3F007968F0 /* HLLoveCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HLLoveCell.xib; sourceTree = "<group>"; };
+		23D011AE1F1A0B3F007968F0 /* HLLoveDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLLoveDetailCell.h; sourceTree = "<group>"; };
+		23D011AF1F1A0B3F007968F0 /* HLLoveDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLLoveDetailCell.m; sourceTree = "<group>"; };
+		23D011B01F1A0B3F007968F0 /* HLLoveDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HLLoveDetailCell.xib; sourceTree = "<group>"; };
+		23D011B31F1A0B3F007968F0 /* HLMainNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLMainNavController.h; sourceTree = "<group>"; };
+		23D011B41F1A0B3F007968F0 /* HLMainNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLMainNavController.m; sourceTree = "<group>"; };
+		23D011B51F1A0B3F007968F0 /* HLMainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLMainTabBarController.h; sourceTree = "<group>"; };
+		23D011B61F1A0B3F007968F0 /* HLMainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLMainTabBarController.m; sourceTree = "<group>"; };
+		23D011B81F1A0B3F007968F0 /* HLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLSessionManager.h; sourceTree = "<group>"; };
+		23D011B91F1A0B3F007968F0 /* HLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLSessionManager.m; sourceTree = "<group>"; };
+		23D011BC1F1A0B3F007968F0 /* UIView+JYDFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JYDFrame.h"; sourceTree = "<group>"; };
+		23D011BD1F1A0B3F007968F0 /* UIView+JYDFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JYDFrame.m"; sourceTree = "<group>"; };
+		23D011C01F1A0B3F007968F0 /* HLSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLSettingViewController.h; sourceTree = "<group>"; };
+		23D011C11F1A0B3F007968F0 /* HLSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLSettingViewController.m; sourceTree = "<group>"; };
+		23D011D91F1A0BC4007968F0 /* Const.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Const.h; sourceTree = "<group>"; };
+		23D011DA1F1A0BC4007968F0 /* Const.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Const.m; sourceTree = "<group>"; };
+		23D011DB1F1A0BC4007968F0 /* HLPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLPrefixHeader.pch; sourceTree = "<group>"; };
+		6FD6C28B141BE71906DF7DA0 /* Pods-HLCartoon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HLCartoon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HLCartoon/Pods-HLCartoon.debug.xcconfig"; sourceTree = "<group>"; };
+		E4D1BDEFC89042149B406F8F /* Pods-HLCartoon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HLCartoon.release.xcconfig"; path = "Pods/Target Support Files/Pods-HLCartoon/Pods-HLCartoon.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		23D0114F1F1A0AEC007968F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94D85C1C9B4B25B0D98242B5 /* libPods-HLCartoon.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23D0116B1F1A0AEC007968F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23D011761F1A0AEC007968F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		23D011491F1A0AEC007968F0 = {
+			isa = PBXGroup;
+			children = (
+				23D011541F1A0AEC007968F0 /* HLCartoon */,
+				23D011711F1A0AEC007968F0 /* HLCartoonTests */,
+				23D0117C1F1A0AEC007968F0 /* HLCartoonUITests */,
+				23D011531F1A0AEC007968F0 /* Products */,
+				2631D9A16C7284EC43773BE4 /* Pods */,
+				3F3DDC140367E5349EB2B7F7 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		23D011531F1A0AEC007968F0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				23D011521F1A0AEC007968F0 /* HLCartoon.app */,
+				23D0116E1F1A0AEC007968F0 /* HLCartoonTests.xctest */,
+				23D011791F1A0AEC007968F0 /* HLCartoonUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		23D011541F1A0AEC007968F0 /* HLCartoon */ = {
+			isa = PBXGroup;
+			children = (
+				23D0118B1F1A0B3F007968F0 /* Classes */,
+				23D011D71F1A0BC4007968F0 /* Source */,
+				23D0115E1F1A0AEC007968F0 /* Main.storyboard */,
+				23D011641F1A0AEC007968F0 /* Assets.xcassets */,
+				23D011661F1A0AEC007968F0 /* LaunchScreen.storyboard */,
+				23D011691F1A0AEC007968F0 /* Info.plist */,
+				23D011611F1A0AEC007968F0 /* HLCartoon.xcdatamodeld */,
+				23D011551F1A0AEC007968F0 /* Supporting Files */,
+			);
+			path = HLCartoon;
+			sourceTree = "<group>";
+		};
+		23D011551F1A0AEC007968F0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				23D011561F1A0AEC007968F0 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		23D011711F1A0AEC007968F0 /* HLCartoonTests */ = {
+			isa = PBXGroup;
+			children = (
+				23D011721F1A0AEC007968F0 /* HLCartoonTests.m */,
+				23D011741F1A0AEC007968F0 /* Info.plist */,
+			);
+			path = HLCartoonTests;
+			sourceTree = "<group>";
+		};
+		23D0117C1F1A0AEC007968F0 /* HLCartoonUITests */ = {
+			isa = PBXGroup;
+			children = (
+				23D0117D1F1A0AEC007968F0 /* HLCartoonUITests.m */,
+				23D0117F1F1A0AEC007968F0 /* Info.plist */,
+			);
+			path = HLCartoonUITests;
+			sourceTree = "<group>";
+		};
+		23D0118B1F1A0B3F007968F0 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				23D0118C1F1A0B3F007968F0 /* AppDelegate */,
+				23D0118F1F1A0B3F007968F0 /* Bookrack - 书架 */,
+				23D011931F1A0B3F007968F0 /* Home - 首页 */,
+				23D011B11F1A0B3F007968F0 /* Main */,
+				23D011BA1F1A0B3F007968F0 /* Other */,
+				23D011BE1F1A0B3F007968F0 /* Setting - 设置 */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		23D0118C1F1A0B3F007968F0 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				23D0118D1F1A0B3F007968F0 /* AppDelegate.h */,
+				23D0118E1F1A0B3F007968F0 /* AppDelegate.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		23D0118F1F1A0B3F007968F0 /* Bookrack - 书架 */ = {
+			isa = PBXGroup;
+			children = (
+				23D011901F1A0B3F007968F0 /* Controller */,
+			);
+			path = "Bookrack - 书架";
+			sourceTree = "<group>";
+		};
+		23D011901F1A0B3F007968F0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				23D011911F1A0B3F007968F0 /* HLBookRackViewController.h */,
+				23D011921F1A0B3F007968F0 /* HLBookRackViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		23D011931F1A0B3F007968F0 /* Home - 首页 */ = {
+			isa = PBXGroup;
+			children = (
+				23D011941F1A0B3F007968F0 /* Controller */,
+				23D011971F1A0B3F007968F0 /* Model */,
+				23D0119E1F1A0B3F007968F0 /* View */,
+			);
+			path = "Home - 首页";
+			sourceTree = "<group>";
+		};
+		23D011941F1A0B3F007968F0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				23D011951F1A0B3F007968F0 /* HLHomeViewController.h */,
+				23D011961F1A0B3F007968F0 /* HLHomeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		23D011971F1A0B3F007968F0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				23D011981F1A0B3F007968F0 /* HLBannersModel.h */,
+				23D011991F1A0B3F007968F0 /* HLBannersModel.m */,
+				23D0119A1F1A0B3F007968F0 /* HLDetailModel.h */,
+				23D0119B1F1A0B3F007968F0 /* HLDetailModel.m */,
+				23D0119C1F1A0B3F007968F0 /* HLSuggestionModel.h */,
+				23D0119D1F1A0B3F007968F0 /* HLSuggestionModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		23D0119E1F1A0B3F007968F0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				23D0119F1F1A0B3F007968F0 /* Funny */,
+				23D011A31F1A0B3F007968F0 /* HLBannersView.h */,
+				23D011A41F1A0B3F007968F0 /* HLBannersView.m */,
+				23D011A51F1A0B3F007968F0 /* HLBaseCell.h */,
+				23D011A61F1A0B3F007968F0 /* HLBaseCell.m */,
+				23D011A71F1A0B3F007968F0 /* HLBaseCollectionCell.h */,
+				23D011A81F1A0B3F007968F0 /* HLBaseCollectionCell.m */,
+				23D011A91F1A0B3F007968F0 /* HLBaseCollectionCell.xib */,
+				23D011AA1F1A0B3F007968F0 /* LoveCell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		23D0119F1F1A0B3F007968F0 /* Funny */ = {
+			isa = PBXGroup;
+			children = (
+				23D011A01F1A0B3F007968F0 /* HLFunnyCell.h */,
+				23D011A11F1A0B3F007968F0 /* HLFunnyCell.m */,
+				23D011A21F1A0B3F007968F0 /* HLFunnyCell.xib */,
+			);
+			path = Funny;
+			sourceTree = "<group>";
+		};
+		23D011AA1F1A0B3F007968F0 /* LoveCell */ = {
+			isa = PBXGroup;
+			children = (
+				23D011AB1F1A0B3F007968F0 /* HLLoveCell.h */,
+				23D011AC1F1A0B3F007968F0 /* HLLoveCell.m */,
+				23D011AD1F1A0B3F007968F0 /* HLLoveCell.xib */,
+				23D011AE1F1A0B3F007968F0 /* HLLoveDetailCell.h */,
+				23D011AF1F1A0B3F007968F0 /* HLLoveDetailCell.m */,
+				23D011B01F1A0B3F007968F0 /* HLLoveDetailCell.xib */,
+			);
+			path = LoveCell;
+			sourceTree = "<group>";
+		};
+		23D011B11F1A0B3F007968F0 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				23D011B21F1A0B3F007968F0 /* Controller */,
+				23D011B71F1A0B3F007968F0 /* Tools */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		23D011B21F1A0B3F007968F0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				23D011B31F1A0B3F007968F0 /* HLMainNavController.h */,
+				23D011B41F1A0B3F007968F0 /* HLMainNavController.m */,
+				23D011B51F1A0B3F007968F0 /* HLMainTabBarController.h */,
+				23D011B61F1A0B3F007968F0 /* HLMainTabBarController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		23D011B71F1A0B3F007968F0 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				23D011B81F1A0B3F007968F0 /* HLSessionManager.h */,
+				23D011B91F1A0B3F007968F0 /* HLSessionManager.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		23D011BA1F1A0B3F007968F0 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				23D011BB1F1A0B3F007968F0 /* Category */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		23D011BB1F1A0B3F007968F0 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				23D011BC1F1A0B3F007968F0 /* UIView+JYDFrame.h */,
+				23D011BD1F1A0B3F007968F0 /* UIView+JYDFrame.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		23D011BE1F1A0B3F007968F0 /* Setting - 设置 */ = {
+			isa = PBXGroup;
+			children = (
+				23D011BF1F1A0B3F007968F0 /* Controller */,
+			);
+			path = "Setting - 设置";
+			sourceTree = "<group>";
+		};
+		23D011BF1F1A0B3F007968F0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				23D011C01F1A0B3F007968F0 /* HLSettingViewController.h */,
+				23D011C11F1A0B3F007968F0 /* HLSettingViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		23D011D71F1A0BC4007968F0 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				23D011D81F1A0BC4007968F0 /* Const */,
+				23D011DB1F1A0BC4007968F0 /* HLPrefixHeader.pch */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		23D011D81F1A0BC4007968F0 /* Const */ = {
+			isa = PBXGroup;
+			children = (
+				23D011D91F1A0BC4007968F0 /* Const.h */,
+				23D011DA1F1A0BC4007968F0 /* Const.m */,
+			);
+			path = Const;
+			sourceTree = "<group>";
+		};
+		2631D9A16C7284EC43773BE4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6FD6C28B141BE71906DF7DA0 /* Pods-HLCartoon.debug.xcconfig */,
+				E4D1BDEFC89042149B406F8F /* Pods-HLCartoon.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3F3DDC140367E5349EB2B7F7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0739EA5CF57AEDAE7A79ECA8 /* libPods-HLCartoon.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		23D011511F1A0AEC007968F0 /* HLCartoon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 23D011821F1A0AEC007968F0 /* Build configuration list for PBXNativeTarget "HLCartoon" */;
+			buildPhases = (
+				4B47812A9EAB69EBD7DB2473 /* [CP] Check Pods Manifest.lock */,
+				23D0114E1F1A0AEC007968F0 /* Sources */,
+				23D0114F1F1A0AEC007968F0 /* Frameworks */,
+				23D011501F1A0AEC007968F0 /* Resources */,
+				DEB2866DF43252F8E82F263F /* [CP] Embed Pods Frameworks */,
+				33E9F57B5194A3195D0150F6 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HLCartoon;
+			productName = HLCartoon;
+			productReference = 23D011521F1A0AEC007968F0 /* HLCartoon.app */;
+			productType = "com.apple.product-type.application";
+		};
+		23D0116D1F1A0AEC007968F0 /* HLCartoonTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 23D011851F1A0AEC007968F0 /* Build configuration list for PBXNativeTarget "HLCartoonTests" */;
+			buildPhases = (
+				23D0116A1F1A0AEC007968F0 /* Sources */,
+				23D0116B1F1A0AEC007968F0 /* Frameworks */,
+				23D0116C1F1A0AEC007968F0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				23D011701F1A0AEC007968F0 /* PBXTargetDependency */,
+			);
+			name = HLCartoonTests;
+			productName = HLCartoonTests;
+			productReference = 23D0116E1F1A0AEC007968F0 /* HLCartoonTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		23D011781F1A0AEC007968F0 /* HLCartoonUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 23D011881F1A0AEC007968F0 /* Build configuration list for PBXNativeTarget "HLCartoonUITests" */;
+			buildPhases = (
+				23D011751F1A0AEC007968F0 /* Sources */,
+				23D011761F1A0AEC007968F0 /* Frameworks */,
+				23D011771F1A0AEC007968F0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				23D0117B1F1A0AEC007968F0 /* PBXTargetDependency */,
+			);
+			name = HLCartoonUITests;
+			productName = HLCartoonUITests;
+			productReference = 23D011791F1A0AEC007968F0 /* HLCartoonUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		23D0114A1F1A0AEC007968F0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = HL;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = Pisces;
+				TargetAttributes = {
+					23D011511F1A0AEC007968F0 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = HMZ598MKR3;
+						ProvisioningStyle = Automatic;
+					};
+					23D0116D1F1A0AEC007968F0 = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 23D011511F1A0AEC007968F0;
+					};
+					23D011781F1A0AEC007968F0 = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 23D011511F1A0AEC007968F0;
+					};
+				};
+			};
+			buildConfigurationList = 23D0114D1F1A0AEC007968F0 /* Build configuration list for PBXProject "HLCartoon" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 23D011491F1A0AEC007968F0;
+			productRefGroup = 23D011531F1A0AEC007968F0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				23D011511F1A0AEC007968F0 /* HLCartoon */,
+				23D0116D1F1A0AEC007968F0 /* HLCartoonTests */,
+				23D011781F1A0AEC007968F0 /* HLCartoonUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		23D011501F1A0AEC007968F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23D011C91F1A0B3F007968F0 /* HLFunnyCell.xib in Resources */,
+				23D011D11F1A0B3F007968F0 /* HLLoveDetailCell.xib in Resources */,
+				23D011681F1A0AEC007968F0 /* LaunchScreen.storyboard in Resources */,
+				23D011651F1A0AEC007968F0 /* Assets.xcassets in Resources */,
+				23D011CD1F1A0B3F007968F0 /* HLBaseCollectionCell.xib in Resources */,
+				23D011601F1A0AEC007968F0 /* Main.storyboard in Resources */,
+				23D011CF1F1A0B3F007968F0 /* HLLoveCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23D0116C1F1A0AEC007968F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23D011771F1A0AEC007968F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		33E9F57B5194A3195D0150F6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HLCartoon/Pods-HLCartoon-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4B47812A9EAB69EBD7DB2473 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DEB2866DF43252F8E82F263F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HLCartoon/Pods-HLCartoon-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		23D0114E1F1A0AEC007968F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23D011631F1A0AEC007968F0 /* HLCartoon.xcdatamodeld in Sources */,
+				23D011C51F1A0B3F007968F0 /* HLBannersModel.m in Sources */,
+				23D011D31F1A0B3F007968F0 /* HLMainTabBarController.m in Sources */,
+				23D011CA1F1A0B3F007968F0 /* HLBannersView.m in Sources */,
+				23D011C31F1A0B3F007968F0 /* HLBookRackViewController.m in Sources */,
+				23D011DC1F1A0BC4007968F0 /* Const.m in Sources */,
+				23D011D51F1A0B3F007968F0 /* UIView+JYDFrame.m in Sources */,
+				23D011C71F1A0B3F007968F0 /* HLSuggestionModel.m in Sources */,
+				23D011C61F1A0B3F007968F0 /* HLDetailModel.m in Sources */,
+				23D011D61F1A0B3F007968F0 /* HLSettingViewController.m in Sources */,
+				23D011571F1A0AEC007968F0 /* main.m in Sources */,
+				23D011C21F1A0B3F007968F0 /* AppDelegate.m in Sources */,
+				23D011D01F1A0B3F007968F0 /* HLLoveDetailCell.m in Sources */,
+				23D011CC1F1A0B3F007968F0 /* HLBaseCollectionCell.m in Sources */,
+				23D011C81F1A0B3F007968F0 /* HLFunnyCell.m in Sources */,
+				23D011D41F1A0B3F007968F0 /* HLSessionManager.m in Sources */,
+				23D011CE1F1A0B3F007968F0 /* HLLoveCell.m in Sources */,
+				23D011CB1F1A0B3F007968F0 /* HLBaseCell.m in Sources */,
+				23D011C41F1A0B3F007968F0 /* HLHomeViewController.m in Sources */,
+				23D011D21F1A0B3F007968F0 /* HLMainNavController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23D0116A1F1A0AEC007968F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23D011731F1A0AEC007968F0 /* HLCartoonTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23D011751F1A0AEC007968F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23D0117E1F1A0AEC007968F0 /* HLCartoonUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		23D011701F1A0AEC007968F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 23D011511F1A0AEC007968F0 /* HLCartoon */;
+			targetProxy = 23D0116F1F1A0AEC007968F0 /* PBXContainerItemProxy */;
+		};
+		23D0117B1F1A0AEC007968F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 23D011511F1A0AEC007968F0 /* HLCartoon */;
+			targetProxy = 23D0117A1F1A0AEC007968F0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		23D0115E1F1A0AEC007968F0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				23D0115F1F1A0AEC007968F0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		23D011661F1A0AEC007968F0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				23D011671F1A0AEC007968F0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		23D011801F1A0AEC007968F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		23D011811F1A0AEC007968F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		23D011831F1A0AEC007968F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6FD6C28B141BE71906DF7DA0 /* Pods-HLCartoon.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = HMZ598MKR3;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = HLCartoon/Source/HLPrefixHeader.pch;
+				INFOPLIST_FILE = HLCartoon/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.JYD.HLCartoon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		23D011841F1A0AEC007968F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4D1BDEFC89042149B406F8F /* Pods-HLCartoon.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = HMZ598MKR3;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = HLCartoon/Source/HLPrefixHeader.pch;
+				INFOPLIST_FILE = HLCartoon/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.JYD.HLCartoon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		23D011861F1A0AEC007968F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = HLCartoonTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.JYD.HLCartoonTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HLCartoon.app/HLCartoon";
+			};
+			name = Debug;
+		};
+		23D011871F1A0AEC007968F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = HLCartoonTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.JYD.HLCartoonTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HLCartoon.app/HLCartoon";
+			};
+			name = Release;
+		};
+		23D011891F1A0AEC007968F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = HLCartoonUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.JYD.HLCartoonUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = HLCartoon;
+			};
+			name = Debug;
+		};
+		23D0118A1F1A0AEC007968F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = HLCartoonUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.JYD.HLCartoonUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = HLCartoon;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		23D0114D1F1A0AEC007968F0 /* Build configuration list for PBXProject "HLCartoon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23D011801F1A0AEC007968F0 /* Debug */,
+				23D011811F1A0AEC007968F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		23D011821F1A0AEC007968F0 /* Build configuration list for PBXNativeTarget "HLCartoon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23D011831F1A0AEC007968F0 /* Debug */,
+				23D011841F1A0AEC007968F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		23D011851F1A0AEC007968F0 /* Build configuration list for PBXNativeTarget "HLCartoonTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23D011861F1A0AEC007968F0 /* Debug */,
+				23D011871F1A0AEC007968F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		23D011881F1A0AEC007968F0 /* Build configuration list for PBXNativeTarget "HLCartoonUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23D011891F1A0AEC007968F0 /* Debug */,
+				23D0118A1F1A0AEC007968F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		23D011611F1A0AEC007968F0 /* HLCartoon.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				23D011621F1A0AEC007968F0 /* HLCartoon.xcdatamodel */,
+			);
+			currentVersion = 23D011621F1A0AEC007968F0 /* HLCartoon.xcdatamodel */;
+			path = HLCartoon.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 23D0114A1F1A0AEC007968F0 /* Project object */;
+}
