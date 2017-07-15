@@ -106,6 +106,7 @@
     
 }
 
+//返回每一行cell的高度
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
         return 240;

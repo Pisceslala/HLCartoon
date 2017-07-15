@@ -37,7 +37,10 @@
     
     self.title_Label.text = model.title;
     
-    [self loadLoveDetailData:model.title];
+    if (self.dataArray.count == 0) {
+        [self loadLoveDetailData:model.title];
+    }
+    
 }
 
 - (void)loadLoveDetailData:(NSString *)title {
@@ -49,7 +52,6 @@
     
     [[HLSessionManager shareHLSessionManager] GET:DETAIL parameters:parm progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
-        NSLog(@"%@",responseObject);
         self.dataArray = [HLDetailModel mj_objectArrayWithKeyValuesArray:responseObject[@"data"][@"topics"]];
         
         [self.tableView reloadData];
