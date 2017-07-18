@@ -9,7 +9,7 @@
 #import "HLFunnyCell.h"
 #import "HLBaseCollectionCell.h"
 @interface HLFunnyCell ()<UICollectionViewDelegate,UICollectionViewDataSource>
-@property (weak, nonatomic) IBOutlet UILabel *title_Label;
+
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @end
@@ -37,11 +37,10 @@
     
 }
 
-- (void)setModel:(HLSuggestionModel *)model {
-    super.model = model;
-    self.title_Label.text = model.title;
+- (void)setSuggestionTitle:(NSString *)suggestionTitle {
+    super.suggestionTitle = suggestionTitle;
     
-    [self loadLoveDetailData:model.title];
+    [self loadLoveDetailData:suggestionTitle];
     
 }
 

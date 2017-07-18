@@ -17,25 +17,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="222.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ofP-ap-sgS">
-                        <rect key="frame" x="10" y="5" width="5" height="20"/>
-                        <color key="backgroundColor" red="1" green="0.33650435880000001" blue="0.19546551670000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="20" id="8AK-tg-SCI"/>
-                            <constraint firstAttribute="width" constant="5" id="LWp-ma-7g4"/>
-                        </constraints>
-                    </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kcu-VS-bZg">
-                        <rect key="frame" x="20" y="5" width="35.5" height="21"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="21" id="CkD-jG-EEJ"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="JOQ-nO-4Cf">
-                        <rect key="frame" x="0.0" y="31" width="320" height="191.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="222.5"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="p38-bE-KdN">
                             <size key="itemSize" width="50" height="50"/>
@@ -47,18 +30,13 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="JOQ-nO-4Cf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="98Y-u4-ZM5"/>
-                    <constraint firstItem="ofP-ap-sgS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="EVe-zp-laN"/>
-                    <constraint firstItem="kcu-VS-bZg" firstAttribute="leading" secondItem="ofP-ap-sgS" secondAttribute="trailing" constant="5" id="IWy-UP-BTD"/>
+                    <constraint firstItem="JOQ-nO-4Cf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="9KZ-61-mSr"/>
                     <constraint firstAttribute="trailing" secondItem="JOQ-nO-4Cf" secondAttribute="trailing" id="j7b-P2-rUd"/>
-                    <constraint firstItem="JOQ-nO-4Cf" firstAttribute="top" secondItem="kcu-VS-bZg" secondAttribute="bottom" constant="5" id="jKG-aI-86U"/>
-                    <constraint firstItem="kcu-VS-bZg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="lMa-dI-N9I"/>
                     <constraint firstAttribute="bottom" secondItem="JOQ-nO-4Cf" secondAttribute="bottom" id="wwA-Uc-ZIK"/>
-                    <constraint firstItem="ofP-ap-sgS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="zla-hO-lNe"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="collectionView" destination="JOQ-nO-4Cf" id="s2M-JQ-8CU"/>
-                <outlet property="title_Label" destination="kcu-VS-bZg" id="AGh-dj-0yN"/>
             </connections>
             <point key="canvasLocation" x="-24" y="95.5"/>
         </tableViewCell>

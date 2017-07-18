@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 @class HLSuggestionModel;
 @interface HLLoveCell : UITableViewCell
-@property (strong, nonatomic) HLSuggestionModel *model;
+@property (nonatomic, copy) NSString *suggestionTitle;
 @end

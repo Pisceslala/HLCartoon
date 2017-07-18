@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "HLSuggestionModel.h"
+
 #import "HLDetailModel.h"
 @interface HLBaseCell : UITableViewCell
-@property (strong, nonatomic) HLSuggestionModel *model;
+@property (nonatomic, copy) NSString *suggestionTitle;
 @property (strong, nonatomic) NSMutableArray *dataArray;
 @end

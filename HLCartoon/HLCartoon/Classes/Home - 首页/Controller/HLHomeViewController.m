@@ -15,15 +15,18 @@
 #import "HLBaseCell.h"
 #import "HLSessionManager.h"
 #import "HLHorribleCell.h"
+#import "HLBaseHeader.h"
 @interface HLHomeViewController ()<UITableViewDelegate, UITableViewDataSource>
 
-@property (nonatomic, strong) UITableView *listView;
+@property (nonatomic, strong) UITableView *listView; //主列表
 
 @property (strong, nonatomic) NSMutableArray *bannerArray;
 
 @property (strong, nonatomic) NSMutableArray *suggestion;
 
 @property (strong, nonatomic) HLBannersView *bannerView; //轮播图
+
+@property (strong, nonatomic) HLBaseHeader *baseHeader;
 
 @end
 
@@ -64,18 +67,15 @@
     
     if (indexPath.section == 0) {
         HLLoveCell *cell = [tableView dequeueReusableCellWithIdentifier:@"loveCell"];
-        HLSuggestionModel *model = self.suggestion[0];
-        cell.model = model;
+        cell.suggestionTitle = @"恋爱";
         return cell;
     }else if (indexPath.section == 1) {
         HLFunnyCell *cell = [tableView dequeueReusableCellWithIdentifier:@"funnyCell"];
-        HLSuggestionModel *model = self.suggestion[3];
-        cell.model = model;
+        cell.suggestionTitle = @"爆笑";
         return cell;
     }else if (indexPath.section == 2) {
         HLHorribleCell *cell = [tableView dequeueReusableCellWithIdentifier:@"horribleCell"];
-        HLSuggestionModel *model = self.suggestion[1];
-        cell.model = model;
+        cell.suggestionTitle = @"灵异";
         return cell;
     }
     
@@ -96,13 +96,14 @@
     if (section == 0) {
         return 220;
     }else {
-        return 10.f;
+        return 40;
     }
+    
 }
 
 -(CGFloat)tableView:(UITableView*)tableView heightForFooterInSection:(NSInteger)section {
     
-    return 0.01f;
+    return 0.01;
     
 }
 
@@ -111,9 +112,9 @@
     if (indexPath.section == 0) {
         return 240;
     }else if (indexPath.section == 1) {
-        return 410;
+        return 380;
     }else if (indexPath.section == 2) {
-        return 750;
+        return 720;
     }
     return 64;
 }
@@ -121,11 +122,21 @@
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     if (section == 0) {
         return self.bannerView;
+    }else if (section == 1) {
+        return [self addHeaderViewForHeaderInSection:3];
+    }else if (section == 2) {
+        return [self addHeaderViewForHeaderInSection:1];
     }
     return nil;
 }
 
-
+- (HLBaseHeader *)addHeaderViewForHeaderInSection:(NSInteger)section {
+    HLBaseHeader *baseHeader = [HLBaseHeader showBaseHeaderView];
+    HLSuggestionModel *model = self.suggestion[section];
+    baseHeader.suggestionModel = model;
+    //self.listView.tableHeaderView.layer.borderColor = [[UIColor whiteColor] CGColor];
+    return baseHeader;
+}
 
 
 #pragma mark - 数据请求

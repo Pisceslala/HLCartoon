@@ -11,8 +11,6 @@
 
 @interface HLHorribleCell ()<UITableViewDelegate,UITableViewDataSource>
 
-@property (weak, nonatomic) IBOutlet UILabel *title_Label;
-
 @property (strong, nonatomic) UITableView *tableView;;
 
 
@@ -32,13 +30,11 @@
     // Configure the view for the selected state
 }
 
-- (void)setModel:(HLSuggestionModel *)model {
-    super.model = model;
-    
-    self.title_Label.text = model.title;
-    
+- (void)setSuggestionTitle:(NSString *)suggestionTitle {
+    super.suggestionTitle = suggestionTitle;
+
     if (self.dataArray.count == 0) {
-        [self loadLoveDetailData:model.title];
+        [self loadLoveDetailData:suggestionTitle];
     }
     
 }
@@ -80,7 +76,7 @@
 #pragma mark - get
 - (UITableView *)tableView {
     if (_tableView == nil) {
-        UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 30, SSScreenW, 6 * 120) style:UITableViewStylePlain];
+        UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SSScreenW, 6 * 120) style:UITableViewStylePlain];
         tableView.dataSource = self;
         tableView.delegate = self;
         tableView.scrollEnabled = NO;

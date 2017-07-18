@@ -46,12 +46,12 @@
     // Configure the view for the selected state
 }
 
-- (void)setModel:(HLSuggestionModel *)model {
-    _model = model;
+- (void)setSuggestionTitle:(NSString *)suggestionTitle {
+    _suggestionTitle = suggestionTitle;
     
-    self.title_Label.text = model.title;
+    self.title_Label.text = suggestionTitle;
     
-    [self loadLoveDetailData:model.title];
+    [self loadLoveDetailData:suggestionTitle];
     
 }
 
