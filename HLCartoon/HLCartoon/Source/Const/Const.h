@@ -22,4 +22,13 @@ UIKIT_EXTERN NSString * const SUGGESTION;
 
 UIKIT_EXTERN NSString * const DETAIL;
 
+
+/**************** CellIdentifiter ***********************/
+UIKIT_EXTERN NSString * const listViewCellIdentifierForLove;
+UIKIT_EXTERN NSString * const listViewCellIdentifierForFunny;
+UIKIT_EXTERN NSString * const listViewCellIdentifierForHorrible;
+UIKIT_EXTERN NSString * const listViewCellIdentifierForAncient;
+UIKIT_EXTERN NSString * const listViewCellIdentifierForFantasy;
+UIKIT_EXTERN NSString * const listViewCellIdentifierForSchool;
+UIKIT_EXTERN NSString * const listViewCellIdentifierForCity;
 @end

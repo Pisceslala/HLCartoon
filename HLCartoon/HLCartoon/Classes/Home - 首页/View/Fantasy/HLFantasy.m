@@ -1,47 +1,41 @@
 //
-//  HLHorribleCell.m
+//  HLFantasy.m
 //  HLCartoon
 //
-//  Created by Pisces on 2017/7/15.
+//  Created by Pisces on 2017/7/19.
 //  Copyright © 2017年 Pisces. All rights reserved.
 //
 
-#import "HLHorribleCell.h"
-#import "HLHorribleDetailCell.h"
+#import "HLFantasy.h"
+#import "HLFantasyCell.h"
+@interface HLFantasy ()<UITableViewDelegate,UITableViewDataSource>
 
-@interface HLHorribleCell ()<UITableViewDelegate,UITableViewDataSource>
 
-@property (strong, nonatomic) UITableView *tableView;;
-
+@property (nonatomic, strong) UITableView *tableView;
 
 @end
 
-@implementation HLHorribleCell
+@implementation HLFantasy
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    
-    [self.contentView addSubview:self.tableView];
-}
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
 }
 
 - (void)setSuggestionTitle:(NSString *)suggestionTitle {
     super.suggestionTitle = suggestionTitle;
+
+    [self.contentView addSubview:self.tableView];
     
-    if (self.dataArray.count == 0) {
-        [self loadHorribleDetailData:suggestionTitle];
-    }
+    [self.tableView registerNib:[UINib nibWithNibName:@"HLFantasyCell" bundle:nil] forCellReuseIdentifier:@"fantasyCell"];
+    
+    [self loadFantasyDetailData:suggestionTitle];
     
 }
 
-- (void)loadHorribleDetailData:(NSString *)title {
+
+- (void)loadFantasyDetailData:(NSString *)title {
     
-    NSString *limit = @"3";
+    NSString *limit = @"2";
     NSString *offset = @"0";
     NSString *tag = title;
     NSDictionary *parm = NSDictionaryOfVariableBindings(limit,offset,tag);
@@ -57,35 +51,30 @@
     }];
 }
 
-
-#pragma mark - dataSource AND delegate
+#pragma mark - dataSource AND deleagte
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.dataArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    HLHorribleDetailCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-    
+    HLFantasyCell *cell = [tableView dequeueReusableCellWithIdentifier:@"fantasyCell"];
     
     cell.model = self.dataArray[indexPath.row];
     
-    
-    return cell;
+    return  cell;
 }
 
-#pragma mark - get
+#pragma mark - GET
 - (UITableView *)tableView {
     if (_tableView == nil) {
-        UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SSScreenW, 3 * 110) style:UITableViewStylePlain];
+        UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SSScreenW, 250) style:UITableViewStylePlain];
+        tableView.backgroundColor = [UIColor whiteColor];
         tableView.dataSource = self;
         tableView.delegate = self;
+        tableView.rowHeight = 125;
         tableView.scrollEnabled = NO;
-        tableView.showsVerticalScrollIndicator = NO;
-        [tableView registerNib:[UINib nibWithNibName:@"HLHorribleDetailCell" bundle:nil] forCellReuseIdentifier:@"cell"];
-        tableView.rowHeight = 100;
         _tableView = tableView;
     }
     return _tableView;
 }
-
 @end

@@ -40,12 +40,12 @@
 - (void)setSuggestionTitle:(NSString *)suggestionTitle {
     super.suggestionTitle = suggestionTitle;
     
-    [self loadLoveDetailData:suggestionTitle];
+    [self loadFunnyDetailData:suggestionTitle];
     
 }
 
 
-- (void)loadLoveDetailData:(NSString *)title {
+- (void)loadFunnyDetailData:(NSString *)title {
     
     NSString *limit = @"4";
     NSString *offset = @"0";

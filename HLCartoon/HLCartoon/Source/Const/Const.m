@@ -15,3 +15,12 @@ NSString * const BANNERS = @"banners";
 NSString * const SUGGESTION = @"tag/suggestion";
 
 NSString * const DETAIL = @"topics";//?limit=20&offset=0&tag=%E6%81%8B%E7%88%B1";
+
+/********************* CellIdentifiter ************************/
+NSString * const listViewCellIdentifierForLove = @"listViewCellIdentifierForLove";
+NSString * const listViewCellIdentifierForFunny = @"listViewCellIdentifierForFunny";
+NSString * const listViewCellIdentifierForHorrible = @"listViewCellIdentifierForHorrible";
+NSString * const listViewCellIdentifierForAncient = @"listViewCellIdentifierForAncient";
+NSString * const listViewCellIdentifierForFantasy = @"listViewCellIdentifierForFantasy";
+NSString * const listViewCellIdentifierForSchool = @"listViewCellIdentifierForSchool";
+NSString * const listViewCellIdentifierForCity = @"listViewCellIdentifierForCity";

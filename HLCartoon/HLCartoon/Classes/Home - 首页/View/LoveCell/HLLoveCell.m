@@ -83,9 +83,7 @@
     
     HLLoveDetailCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"detailCell" forIndexPath:indexPath];
     
-    HLDetailModel *model = self.dataArray[indexPath.row];
-    
-    cell.model = model;
+    cell.model = self.dataArray[indexPath.row];
     
     return cell;
 }
