@@ -30,6 +30,14 @@
                             <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DLe-5Q-Ro7">
+                            <rect key="frame" x="326" y="5" width="39" height="20"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <state key="normal" title="更多 &gt;"/>
+                            <connections>
+                                <action selector="moreBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="MAx-UZ-JE4"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
@@ -37,8 +45,11 @@
                         <constraint firstItem="QdS-vf-DWH" firstAttribute="top" secondItem="PAG-y0-Vt4" secondAttribute="top" constant="5" id="Oav-Gu-ARG"/>
                         <constraint firstAttribute="bottom" secondItem="Jrx-aO-tgy" secondAttribute="bottom" constant="5" id="QAi-pG-fNk"/>
                         <constraint firstAttribute="bottom" secondItem="QdS-vf-DWH" secondAttribute="bottom" constant="5" id="QbZ-fM-IFA"/>
+                        <constraint firstAttribute="trailing" secondItem="DLe-5Q-Ro7" secondAttribute="trailing" constant="10" id="QcY-aQ-x1n"/>
                         <constraint firstItem="QdS-vf-DWH" firstAttribute="leading" secondItem="Jrx-aO-tgy" secondAttribute="trailing" constant="5" id="YWR-EZ-cQF"/>
                         <constraint firstItem="Jrx-aO-tgy" firstAttribute="top" secondItem="PAG-y0-Vt4" secondAttribute="top" constant="5" id="jAn-fA-xbS"/>
+                        <constraint firstAttribute="bottom" secondItem="DLe-5Q-Ro7" secondAttribute="bottom" constant="5" id="khU-G7-8mp"/>
+                        <constraint firstItem="DLe-5Q-Ro7" firstAttribute="top" secondItem="PAG-y0-Vt4" secondAttribute="top" constant="5" id="yH5-7Q-IGK"/>
                     </constraints>
                 </view>
             </subviews>

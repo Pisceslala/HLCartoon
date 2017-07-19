@@ -21,6 +21,16 @@
 #import "HLSchoolCell.h"
 #import "HLCityCell.h"
 
+typedef NS_ENUM(NSInteger, HeaderViewStyle) {
+    HeaderViewStyleLove,        //==> 0
+    HeaderViewStyleFunny,
+    HeaderViewStyleAncient,
+    HeaderViewStyleHorrible,
+    HeaderViewStyleFantasy,
+    HeaderViewStyleSchool,
+    HeaderViewStyleCity
+};
+
 @interface HLHomeViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *listView; //主列表
@@ -32,6 +42,8 @@
 @property (strong, nonatomic) HLBannersView *bannerView; //轮播图
 
 @property (strong, nonatomic) HLBaseHeader *baseHeader; //头部视图
+
+@property (assign, nonatomic) HeaderViewStyle HeaderViewStyle;
 
 @end
 

@@ -27,6 +27,8 @@
     self.title_Label.text = suggestionModel.title;
 }
 
+- (IBAction)moreBtnClick:(id)sender {
+}
 
 
 @end
