@@ -23,9 +23,9 @@
 
 typedef NS_ENUM(NSInteger, HeaderViewStyle) {
     HeaderViewStyleLove,        //==> 0
-    HeaderViewStyleFunny,
-    HeaderViewStyleAncient,
     HeaderViewStyleHorrible,
+    HeaderViewStyleAncient,
+    HeaderViewStyleFunny,
     HeaderViewStyleFantasy,
     HeaderViewStyleSchool,
     HeaderViewStyleCity

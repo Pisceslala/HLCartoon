@@ -301,9 +301,9 @@
 			isa = PBXGroup;
 			children = (
 				23D0118C1F1A0B3F007968F0 /* AppDelegate */,
+				23D011B11F1A0B3F007968F0 /* Main */,
 				23D0118F1F1A0B3F007968F0 /* Bookrack - 书架 */,
 				23D011931F1A0B3F007968F0 /* Home - 首页 */,
-				23D011B11F1A0B3F007968F0 /* Main */,
 				23D011BA1F1A0B3F007968F0 /* Other */,
 				23D011BE1F1A0B3F007968F0 /* Setting - 设置 */,
 			);
