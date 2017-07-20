@@ -54,6 +54,9 @@
 		23FB5E721F20561200A50F8A /* HLEnergyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23FB5E711F20561200A50F8A /* HLEnergyCell.m */; };
 		23FB5E761F2058EE00A50F8A /* HLColumnCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23FB5E751F2058EE00A50F8A /* HLColumnCell.m */; };
 		23FB5E7A1F205A9700A50F8A /* HLCompleteCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23FB5E791F205A9700A50F8A /* HLCompleteCell.m */; };
+		23FB5E7D1F205D6E00A50F8A /* HLMoreListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23FB5E7C1F205D6E00A50F8A /* HLMoreListViewController.m */; };
+		23FB5E811F20645300A50F8A /* HLMoreListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23FB5E7F1F20645300A50F8A /* HLMoreListCell.m */; };
+		23FB5E821F20645300A50F8A /* HLMoreListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23FB5E801F20645300A50F8A /* HLMoreListCell.xib */; };
 		94D85C1C9B4B25B0D98242B5 /* libPods-HLCartoon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0739EA5CF57AEDAE7A79ECA8 /* libPods-HLCartoon.a */; };
 /* End PBXBuildFile section */
 
@@ -162,6 +165,11 @@
 		23FB5E751F2058EE00A50F8A /* HLColumnCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLColumnCell.m; sourceTree = "<group>"; };
 		23FB5E781F205A9700A50F8A /* HLCompleteCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLCompleteCell.h; sourceTree = "<group>"; };
 		23FB5E791F205A9700A50F8A /* HLCompleteCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLCompleteCell.m; sourceTree = "<group>"; };
+		23FB5E7B1F205D6E00A50F8A /* HLMoreListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLMoreListViewController.h; sourceTree = "<group>"; };
+		23FB5E7C1F205D6E00A50F8A /* HLMoreListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLMoreListViewController.m; sourceTree = "<group>"; };
+		23FB5E7E1F20645300A50F8A /* HLMoreListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLMoreListCell.h; sourceTree = "<group>"; };
+		23FB5E7F1F20645300A50F8A /* HLMoreListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLMoreListCell.m; sourceTree = "<group>"; };
+		23FB5E801F20645300A50F8A /* HLMoreListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HLMoreListCell.xib; sourceTree = "<group>"; };
 		6FD6C28B141BE71906DF7DA0 /* Pods-HLCartoon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HLCartoon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HLCartoon/Pods-HLCartoon.debug.xcconfig"; sourceTree = "<group>"; };
 		E4D1BDEFC89042149B406F8F /* Pods-HLCartoon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HLCartoon.release.xcconfig"; path = "Pods/Target Support Files/Pods-HLCartoon/Pods-HLCartoon.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -248,6 +256,9 @@
 				239B4AA11F1E09FD001D093F /* HLBaseHeader.h */,
 				239B4AA21F1E09FD001D093F /* HLBaseHeader.m */,
 				239B4AA41F1E0A0A001D093F /* HLBaseHeader.xib */,
+				23FB5E7E1F20645300A50F8A /* HLMoreListCell.h */,
+				23FB5E7F1F20645300A50F8A /* HLMoreListCell.m */,
+				23FB5E801F20645300A50F8A /* HLMoreListCell.xib */,
 			);
 			name = "BaseView - 基类Cell";
 			path = BaseView;
@@ -370,6 +381,8 @@
 			children = (
 				23D011951F1A0B3F007968F0 /* HLHomeViewController.h */,
 				23D011961F1A0B3F007968F0 /* HLHomeViewController.m */,
+				23FB5E7B1F205D6E00A50F8A /* HLMoreListViewController.h */,
+				23FB5E7C1F205D6E00A50F8A /* HLMoreListViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -726,6 +739,7 @@
 				239B4AA51F1E0A0A001D093F /* HLBaseHeader.xib in Resources */,
 				236C04A81F1F3BA5007DCDED /* HLFantasyCell.xib in Resources */,
 				239B4A9B1F1E08C4001D093F /* HLBaseCollectionCell.xib in Resources */,
+				23FB5E821F20645300A50F8A /* HLMoreListCell.xib in Resources */,
 				23D011CF1F1A0B3F007968F0 /* HLLoveCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -829,6 +843,8 @@
 				23D011D01F1A0B3F007968F0 /* HLLoveDetailCell.m in Sources */,
 				23D011C81F1A0B3F007968F0 /* HLFunnyCell.m in Sources */,
 				23D011D41F1A0B3F007968F0 /* HLSessionManager.m in Sources */,
+				23FB5E811F20645300A50F8A /* HLMoreListCell.m in Sources */,
+				23FB5E7D1F205D6E00A50F8A /* HLMoreListViewController.m in Sources */,
 				23FB5E661F20495C00A50F8A /* HLRainbowCell.m in Sources */,
 				23D011CE1F1A0B3F007968F0 /* HLLoveCell.m in Sources */,
 				23D011C41F1A0B3F007968F0 /* HLHomeViewController.m in Sources */,

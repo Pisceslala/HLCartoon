@@ -28,6 +28,12 @@
 }
 
 - (IBAction)moreBtnClick:(id)sender {
+    
+    __weak typeof(self)weakSelf = self;
+    if ([weakSelf.delegate respondsToSelector:@selector(didClickMoreButtonInHeaderView:)]) {
+        [weakSelf.delegate didClickMoreButtonInHeaderView:self.title_Label.text];
+    }
+    
 }
 
 

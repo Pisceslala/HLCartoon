@@ -26,6 +26,7 @@
 #import "HLEnergyCell.h"
 #import "HLColumnCell.h"
 #import "HLCompleteCell.h"
+#import "HLMoreListViewController.h"
 
 typedef NS_ENUM(NSInteger, HeaderViewStyle) {
     HeaderViewStyleLove,        //==> 0
@@ -37,7 +38,7 @@ typedef NS_ENUM(NSInteger, HeaderViewStyle) {
     HeaderViewStyleCity
 };
 
-@interface HLHomeViewController ()<UITableViewDelegate, UITableViewDataSource>
+@interface HLHomeViewController ()<UITableViewDelegate, UITableViewDataSource, HLBaseHeaderDelegate>
 
 @property (nonatomic, strong) UITableView *listView; //主列表
 
@@ -264,8 +265,16 @@ typedef NS_ENUM(NSInteger, HeaderViewStyle) {
     HLBaseHeader *baseHeader = [HLBaseHeader showBaseHeaderView];
     HLSuggestionModel *model = self.suggestion[section];
     baseHeader.suggestionModel = model;
-    //self.listView.tableHeaderView.layer.borderColor = [[UIColor whiteColor] CGColor];
+    baseHeader.delegate = self;
     return baseHeader;
+}
+
+#pragma mark - headerViewDelegate
+- (void)didClickMoreButtonInHeaderView:(NSString *)suggestion {
+    HLMoreListViewController *vc = [[HLMoreListViewController alloc] init];
+    vc.title = suggestion;
+    vc.suggestion = suggestion;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 
