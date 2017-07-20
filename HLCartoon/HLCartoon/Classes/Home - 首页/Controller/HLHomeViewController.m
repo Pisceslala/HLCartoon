@@ -20,6 +20,12 @@
 #import "HLFantasy.h"
 #import "HLSchoolCell.h"
 #import "HLCityCell.h"
+#import "HLRainbowCell.h"
+#import "HLYoungCell.h"
+#import "HLPresidentCell.h"
+#import "HLEnergyCell.h"
+#import "HLColumnCell.h"
+#import "HLCompleteCell.h"
 
 typedef NS_ENUM(NSInteger, HeaderViewStyle) {
     HeaderViewStyleLove,        //==> 0
@@ -80,7 +86,12 @@ typedef NS_ENUM(NSInteger, HeaderViewStyle) {
     [self.listView registerClass:[HLFantasy class] forCellReuseIdentifier:listViewCellIdentifierForFantasy];
     [self.listView registerClass:[HLSchoolCell class] forCellReuseIdentifier:listViewCellIdentifierForSchool];
     [self.listView registerClass:[HLCityCell class] forCellReuseIdentifier:listViewCellIdentifierForCity];
-    
+    [self.listView registerClass:[HLRainbowCell class] forCellReuseIdentifier:listViewCellIdentifierForRainbow];
+    [self.listView registerClass:[HLYoungCell class] forCellReuseIdentifier:listViewCellIdentifierForYoung];
+    [self.listView registerClass:[HLPresidentCell class] forCellReuseIdentifier:listViewCellIdentifierForPresident];
+    [self.listView registerClass:[HLEnergyCell class] forCellReuseIdentifier:listViewCellIdentifierForEnergy];
+    [self.listView registerClass:[HLColumnCell class] forCellReuseIdentifier:listViewCellIdentifierForColumn];
+    [self.listView registerClass:[HLCompleteCell class] forCellReuseIdentifier:listViewCellIdentifierForComplete];
     
 }
 
@@ -128,17 +139,32 @@ typedef NS_ENUM(NSInteger, HeaderViewStyle) {
         HLCityCell *cell = [tableView dequeueReusableCellWithIdentifier:listViewCellIdentifierForCity];
         cell.suggestionTitle = @"都市";
         return cell;
+    }else if (indexPath.section == 7) {
+        HLRainbowCell *cell = [tableView dequeueReusableCellWithIdentifier:listViewCellIdentifierForRainbow];
+        cell.suggestionTitle = @"彩虹";
+        return cell;
+    }else if (indexPath.section == 8) {
+        HLYoungCell *cell = [tableView dequeueReusableCellWithIdentifier:listViewCellIdentifierForYoung];
+        cell.suggestionTitle = @"少年";
+        return cell;
+    }else if (indexPath.section == 9) {
+        HLPresidentCell *cell = [tableView dequeueReusableCellWithIdentifier:listViewCellIdentifierForPresident];
+        cell.suggestionTitle = @"总裁";
+        return cell;
+    }else if (indexPath.section == 10) {
+        HLEnergyCell *cell = [tableView dequeueReusableCellWithIdentifier:listViewCellIdentifierForEnergy];
+        cell.suggestionTitle = @"正能量";
+        return cell;
+    }else if (indexPath.section == 11) {
+        HLColumnCell *cell = [tableView dequeueReusableCellWithIdentifier:listViewCellIdentifierForColumn];
+        cell.suggestionTitle = @"栏目";
+        return cell;
+    }else if (indexPath.section == 12) {
+        HLCompleteCell *cell = [tableView dequeueReusableCellWithIdentifier:listViewCellIdentifierForComplete];
+        cell.suggestionTitle = @"完结";
+        return cell;
     }
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@""];
-    
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@""];
-    }
-    
-    cell.textLabel.text = @"qwe";
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    return cell;
+    return nil;
     
 }
 
@@ -160,6 +186,7 @@ typedef NS_ENUM(NSInteger, HeaderViewStyle) {
 
 //返回每一行cell的高度
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
     if (indexPath.section == 0) {
         return 240;
     }else if (indexPath.section == 1) {
@@ -174,10 +201,23 @@ typedef NS_ENUM(NSInteger, HeaderViewStyle) {
         return 440;
     }else if (indexPath.section == 6) {
         return 340;
+    }else if (indexPath.section == 7) {
+        return 375;
+    }else if (indexPath.section == 8) {
+        return 330;
+    }else if (indexPath.section == 9) {
+        return 250;
+    }else if (indexPath.section == 10) {
+        return 130;
+    }else if (indexPath.section == 11) {
+        return 250;
+    }else if (indexPath.section == 12) {
+        return 338;
     }
     return 64;
 }
 
+//返回每一行的头部视图
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     if (section == 0) {
         return self.bannerView;
@@ -188,13 +228,29 @@ typedef NS_ENUM(NSInteger, HeaderViewStyle) {
     }else if (section == 3) {
         return [self addHeaderViewForHeaderInSection:2];
     }else if (section == 4) {
-        return [self addHeaderViewForHeaderInSection:4];
+        return [self addHeaderViewForHeaderInSection:section];
     }else if (section == 5) {
-        return [self addHeaderViewForHeaderInSection:5];
+        return [self addHeaderViewForHeaderInSection:section];
     }else if (section == 6) {
-        return [self addHeaderViewForHeaderInSection:6];
+        return [self addHeaderViewForHeaderInSection:section];
+    }else if (section == 7) {
+        return [self addHeaderViewForHeaderInSection:section];
+    }else if (section == 8) {
+        return [self addHeaderViewForHeaderInSection:section];
+    }else if (section == 9) {
+        return [self addHeaderViewForHeaderInSection:section];
+    }else if (section == 10) {
+        return [self addHeaderViewForHeaderInSection:section];
+    }else if (section == 11) {
+        return [self addHeaderViewForHeaderInSection:section];
+    }else if (section == 12) {
+        return [self addHeaderViewForHeaderInSection:section];
     }
+    
+    
+    
     return nil;
+
 }
 
 

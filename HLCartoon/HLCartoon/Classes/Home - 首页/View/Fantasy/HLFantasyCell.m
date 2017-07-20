@@ -42,6 +42,7 @@
     
     
     self.title_Label.text = model.title;
+    
 }
 
 - (void)setFrame:(CGRect)frame {

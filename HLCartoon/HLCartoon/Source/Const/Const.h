@@ -31,4 +31,10 @@ UIKIT_EXTERN NSString * const listViewCellIdentifierForAncient;
 UIKIT_EXTERN NSString * const listViewCellIdentifierForFantasy;
 UIKIT_EXTERN NSString * const listViewCellIdentifierForSchool;
 UIKIT_EXTERN NSString * const listViewCellIdentifierForCity;
+UIKIT_EXTERN NSString * const listViewCellIdentifierForRainbow;
+UIKIT_EXTERN NSString * const listViewCellIdentifierForYoung;
+UIKIT_EXTERN NSString * const listViewCellIdentifierForPresident;
+UIKIT_EXTERN NSString * const listViewCellIdentifierForEnergy;
+UIKIT_EXTERN NSString * const listViewCellIdentifierForColumn;
+UIKIT_EXTERN NSString * const listViewCellIdentifierForComplete;
 @end
