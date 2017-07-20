@@ -57,6 +57,15 @@
 		23FB5E7D1F205D6E00A50F8A /* HLMoreListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23FB5E7C1F205D6E00A50F8A /* HLMoreListViewController.m */; };
 		23FB5E811F20645300A50F8A /* HLMoreListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23FB5E7F1F20645300A50F8A /* HLMoreListCell.m */; };
 		23FB5E821F20645300A50F8A /* HLMoreListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23FB5E801F20645300A50F8A /* HLMoreListCell.xib */; };
+		23FB5E851F20871200A50F8A /* HLDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23FB5E841F20871200A50F8A /* HLDetailsViewController.m */; };
+		23FB5E881F2091D900A50F8A /* HLBookDetailsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 23FB5E871F2091D900A50F8A /* HLBookDetailsModel.m */; };
+		23FB5E8C1F20959400A50F8A /* HLTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 23FB5E8B1F20959400A50F8A /* HLTopView.m */; };
+		23FB5E8E1F2095A000A50F8A /* HLTopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23FB5E8D1F2095A000A50F8A /* HLTopView.xib */; };
+		23FB5E911F20B33900A50F8A /* HLBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 23FB5E901F20B33900A50F8A /* HLBottomView.m */; };
+		23FB5E941F20B54700A50F8A /* HLLeftView.m in Sources */ = {isa = PBXBuildFile; fileRef = 23FB5E931F20B54700A50F8A /* HLLeftView.m */; };
+		23FB5E961F20B56700A50F8A /* HLLeftView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23FB5E951F20B56700A50F8A /* HLLeftView.xib */; };
+		23FB5EA01F20BA7C00A50F8A /* HLSwitchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23FB5E9E1F20BA7C00A50F8A /* HLSwitchCell.m */; };
+		23FB5EA11F20BA7C00A50F8A /* HLSwitchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23FB5E9F1F20BA7C00A50F8A /* HLSwitchCell.xib */; };
 		94D85C1C9B4B25B0D98242B5 /* libPods-HLCartoon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0739EA5CF57AEDAE7A79ECA8 /* libPods-HLCartoon.a */; };
 /* End PBXBuildFile section */
 
@@ -170,6 +179,21 @@
 		23FB5E7E1F20645300A50F8A /* HLMoreListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLMoreListCell.h; sourceTree = "<group>"; };
 		23FB5E7F1F20645300A50F8A /* HLMoreListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLMoreListCell.m; sourceTree = "<group>"; };
 		23FB5E801F20645300A50F8A /* HLMoreListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HLMoreListCell.xib; sourceTree = "<group>"; };
+		23FB5E831F20871200A50F8A /* HLDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLDetailsViewController.h; sourceTree = "<group>"; };
+		23FB5E841F20871200A50F8A /* HLDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLDetailsViewController.m; sourceTree = "<group>"; };
+		23FB5E861F2091D900A50F8A /* HLBookDetailsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLBookDetailsModel.h; sourceTree = "<group>"; };
+		23FB5E871F2091D900A50F8A /* HLBookDetailsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLBookDetailsModel.m; sourceTree = "<group>"; };
+		23FB5E8A1F20959400A50F8A /* HLTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLTopView.h; sourceTree = "<group>"; };
+		23FB5E8B1F20959400A50F8A /* HLTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLTopView.m; sourceTree = "<group>"; };
+		23FB5E8D1F2095A000A50F8A /* HLTopView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HLTopView.xib; sourceTree = "<group>"; };
+		23FB5E8F1F20B33900A50F8A /* HLBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLBottomView.h; sourceTree = "<group>"; };
+		23FB5E901F20B33900A50F8A /* HLBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLBottomView.m; sourceTree = "<group>"; };
+		23FB5E921F20B54700A50F8A /* HLLeftView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLLeftView.h; sourceTree = "<group>"; };
+		23FB5E931F20B54700A50F8A /* HLLeftView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLLeftView.m; sourceTree = "<group>"; };
+		23FB5E951F20B56700A50F8A /* HLLeftView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HLLeftView.xib; sourceTree = "<group>"; };
+		23FB5E9D1F20BA7C00A50F8A /* HLSwitchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLSwitchCell.h; sourceTree = "<group>"; };
+		23FB5E9E1F20BA7C00A50F8A /* HLSwitchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLSwitchCell.m; sourceTree = "<group>"; };
+		23FB5E9F1F20BA7C00A50F8A /* HLSwitchCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HLSwitchCell.xib; sourceTree = "<group>"; };
 		6FD6C28B141BE71906DF7DA0 /* Pods-HLCartoon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HLCartoon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HLCartoon/Pods-HLCartoon.debug.xcconfig"; sourceTree = "<group>"; };
 		E4D1BDEFC89042149B406F8F /* Pods-HLCartoon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HLCartoon.release.xcconfig"; path = "Pods/Target Support Files/Pods-HLCartoon/Pods-HLCartoon.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -383,6 +407,8 @@
 				23D011961F1A0B3F007968F0 /* HLHomeViewController.m */,
 				23FB5E7B1F205D6E00A50F8A /* HLMoreListViewController.h */,
 				23FB5E7C1F205D6E00A50F8A /* HLMoreListViewController.m */,
+				23FB5E831F20871200A50F8A /* HLDetailsViewController.h */,
+				23FB5E841F20871200A50F8A /* HLDetailsViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -396,6 +422,8 @@
 				23D0119B1F1A0B3F007968F0 /* HLDetailModel.m */,
 				23D0119C1F1A0B3F007968F0 /* HLSuggestionModel.h */,
 				23D0119D1F1A0B3F007968F0 /* HLSuggestionModel.m */,
+				23FB5E861F2091D900A50F8A /* HLBookDetailsModel.h */,
+				23FB5E871F2091D900A50F8A /* HLBookDetailsModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -403,6 +431,7 @@
 		23D0119E1F1A0B3F007968F0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				23FB5E891F20956D00A50F8A /* TopView - 头部视图 */,
 				239B4A901F1E08C4001D093F /* BaseView - 基类Cell */,
 				23FB5E771F205A8800A50F8A /* Complete - 完结 */,
 				23FB5E731F2058C100A50F8A /* Column - 栏目 */,
@@ -601,6 +630,25 @@
 			path = Complete;
 			sourceTree = "<group>";
 		};
+		23FB5E891F20956D00A50F8A /* TopView - 头部视图 */ = {
+			isa = PBXGroup;
+			children = (
+				23FB5E8A1F20959400A50F8A /* HLTopView.h */,
+				23FB5E8B1F20959400A50F8A /* HLTopView.m */,
+				23FB5E8D1F2095A000A50F8A /* HLTopView.xib */,
+				23FB5E8F1F20B33900A50F8A /* HLBottomView.h */,
+				23FB5E901F20B33900A50F8A /* HLBottomView.m */,
+				23FB5E921F20B54700A50F8A /* HLLeftView.h */,
+				23FB5E931F20B54700A50F8A /* HLLeftView.m */,
+				23FB5E951F20B56700A50F8A /* HLLeftView.xib */,
+				23FB5E9D1F20BA7C00A50F8A /* HLSwitchCell.h */,
+				23FB5E9E1F20BA7C00A50F8A /* HLSwitchCell.m */,
+				23FB5E9F1F20BA7C00A50F8A /* HLSwitchCell.xib */,
+			);
+			name = "TopView - 头部视图";
+			path = TopView;
+			sourceTree = "<group>";
+		};
 		2631D9A16C7284EC43773BE4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -731,6 +779,7 @@
 			files = (
 				23D011E71F1A194F007968F0 /* HLHorribleDetailCell.xib in Resources */,
 				23D011C91F1A0B3F007968F0 /* HLFunnyCell.xib in Resources */,
+				23FB5EA11F20BA7C00A50F8A /* HLSwitchCell.xib in Resources */,
 				23D011D11F1A0B3F007968F0 /* HLLoveDetailCell.xib in Resources */,
 				23D011681F1A0AEC007968F0 /* LaunchScreen.storyboard in Resources */,
 				23D011651F1A0AEC007968F0 /* Assets.xcassets in Resources */,
@@ -738,6 +787,8 @@
 				23D011E21F1A12F8007968F0 /* HLHorribleCell.xib in Resources */,
 				239B4AA51F1E0A0A001D093F /* HLBaseHeader.xib in Resources */,
 				236C04A81F1F3BA5007DCDED /* HLFantasyCell.xib in Resources */,
+				23FB5E961F20B56700A50F8A /* HLLeftView.xib in Resources */,
+				23FB5E8E1F2095A000A50F8A /* HLTopView.xib in Resources */,
 				239B4A9B1F1E08C4001D093F /* HLBaseCollectionCell.xib in Resources */,
 				23FB5E821F20645300A50F8A /* HLMoreListCell.xib in Resources */,
 				23D011CF1F1A0B3F007968F0 /* HLLoveCell.xib in Resources */,
@@ -834,6 +885,8 @@
 				23D011C71F1A0B3F007968F0 /* HLSuggestionModel.m in Sources */,
 				23D011C61F1A0B3F007968F0 /* HLDetailModel.m in Sources */,
 				23D011E61F1A194F007968F0 /* HLHorribleDetailCell.m in Sources */,
+				23FB5E911F20B33900A50F8A /* HLBottomView.m in Sources */,
+				23FB5E851F20871200A50F8A /* HLDetailsViewController.m in Sources */,
 				23D011D61F1A0B3F007968F0 /* HLSettingViewController.m in Sources */,
 				23D011571F1A0AEC007968F0 /* main.m in Sources */,
 				23D011E11F1A12F8007968F0 /* HLHorribleCell.m in Sources */,
@@ -843,10 +896,14 @@
 				23D011D01F1A0B3F007968F0 /* HLLoveDetailCell.m in Sources */,
 				23D011C81F1A0B3F007968F0 /* HLFunnyCell.m in Sources */,
 				23D011D41F1A0B3F007968F0 /* HLSessionManager.m in Sources */,
+				23FB5E881F2091D900A50F8A /* HLBookDetailsModel.m in Sources */,
 				23FB5E811F20645300A50F8A /* HLMoreListCell.m in Sources */,
 				23FB5E7D1F205D6E00A50F8A /* HLMoreListViewController.m in Sources */,
+				23FB5EA01F20BA7C00A50F8A /* HLSwitchCell.m in Sources */,
+				23FB5E8C1F20959400A50F8A /* HLTopView.m in Sources */,
 				23FB5E661F20495C00A50F8A /* HLRainbowCell.m in Sources */,
 				23D011CE1F1A0B3F007968F0 /* HLLoveCell.m in Sources */,
+				23FB5E941F20B54700A50F8A /* HLLeftView.m in Sources */,
 				23D011C41F1A0B3F007968F0 /* HLHomeViewController.m in Sources */,
 				23D011D21F1A0B3F007968F0 /* HLMainNavController.m in Sources */,
 			);

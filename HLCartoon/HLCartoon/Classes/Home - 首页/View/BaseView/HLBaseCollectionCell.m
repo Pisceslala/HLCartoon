@@ -26,7 +26,7 @@
     
     self.baseTitle.text = model.title;
     
-    [self.baseImageView sd_setImageWithURL:[NSURL URLWithString:model.vertical_image_url] completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+    [self.baseImageView sd_setImageWithURL:[NSURL URLWithString:model.cover_image_url] completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
         
     }];
 }
