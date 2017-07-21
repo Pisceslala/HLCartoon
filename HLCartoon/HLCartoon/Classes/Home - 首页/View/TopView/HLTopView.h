@@ -7,7 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
+
+@protocol HLTopViewDelegate <NSObject>
+
+- (void)didClickLeftBtn;
+
+- (void)didClickRightBtn;
+
+@end
+
 @interface HLTopView : UIView
 + (instancetype)showTopView;
 @property (assign, nonatomic) NSString *imageURL;
+
+@property (weak, nonatomic) id<HLTopViewDelegate> delegate;
+
+@property (strong, nonatomic) UIView *lineView;
+
 @end

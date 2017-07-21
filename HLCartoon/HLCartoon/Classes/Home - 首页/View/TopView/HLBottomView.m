@@ -9,11 +9,13 @@
 #import "HLBottomView.h"
 #import "HLLeftView.h"
 #import "HLSwitchCell.h"
+#import "HLRightView.h"
 @interface HLBottomView ()<UICollectionViewDelegate,UICollectionViewDataSource>
 
-@property (strong,nonatomic) UICollectionView *collectionView;
+
 @property (strong, nonatomic) HLLeftView *leftView;
-@property (strong, nonatomic) UITableView *tableView;
+
+@property (strong, nonatomic) NSMutableArray *dataArray;
 
 @end
 
@@ -43,23 +45,57 @@
 - (void)configViews {
     [self addSubview:self.collectionView];
     [self.collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([HLSwitchCell class]) bundle:nil] forCellWithReuseIdentifier:@"cell"];
+    self.collectionView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
 }
 
 
 #pragma mark - 数据源
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 2;
+    return self.dataArray.count + 1;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     HLSwitchCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
     
-    if (indexPath.row == 0) {
-        cell.firstView = self.leftView;
-    }else {
-        cell.secondView =self.tableView;
+    if (self.dataArray.count > 0) {
+        if (indexPath.row == 0) {
+            cell.firstView = self.leftView;
+            cell.model = self.dataArray[0];
+        }else {
+            cell.secondView =self.tableView;
+            cell.model = self.dataArray[0];
+        }
     }
+   
     return cell;
+}
+
+
+- (void)setID:(NSString *)ID {
+    _ID = ID;
+    
+    [self loadDetailsDataWithID:ID];
+}
+
+#pragma mark - 网络请求
+- (void)loadDetailsDataWithID:(NSString *)ID {
+    NSString *URL = [NSString stringWithFormat:@"%@/%@",DETAIL,ID];
+    NSString *sort = @"1";
+    
+    NSDictionary *pram = NSDictionaryOfVariableBindings(sort);
+    
+    
+    [[HLSessionManager shareHLSessionManager] GET:URL parameters:pram progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        HLBookDetailsModel *model = [HLBookDetailsModel mj_objectWithKeyValues:responseObject[@"data"]];
+        
+        [self.dataArray addObject:model];
+        
+        [self.collectionView reloadData];
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+    }];
 }
 
 #pragma mark - GET
@@ -68,10 +104,14 @@
         UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
         flow.itemSize = CGSizeMake(SSScreenW, self.JYD_Height);
         flow.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+        flow.minimumInteritemSpacing = 0;
+        flow.minimumLineSpacing = 0;
         UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:self.bounds collectionViewLayout:flow];
         collectionView.pagingEnabled = YES;
         collectionView.delegate = self;
         collectionView.dataSource = self;
+        collectionView.scrollEnabled = NO;
+        collectionView.backgroundColor = [UIColor whiteColor];
         _collectionView = collectionView;
     }
     return _collectionView;
@@ -82,6 +122,20 @@
         _leftView = [HLLeftView shwoLeftView];
     }
     return _leftView;
+}
+
+- (HLRightView *)tableView {
+    if (!_tableView) {
+        _tableView = [[HLRightView alloc] initWithFrame:CGRectMake(0, 0, SSScreenW, self.JYD_Height - 349)];
+    }
+    return _tableView;
+}
+
+- (NSMutableArray *)dataArray {
+    if (!_dataArray) {
+        _dataArray = [NSMutableArray array];
+    }
+    return _dataArray;
 }
 
 @end

@@ -16,6 +16,8 @@ NSString * const SUGGESTION = @"tag/suggestion";
 
 NSString * const DETAIL = @"topics";//?limit=20&offset=0&tag=%E6%81%8B%E7%88%B1";
 
+NSString * const COMICE = @"comics";
+
 /********************* CellIdentifiter ************************/
 NSString * const listViewCellIdentifierForLove = @"listViewCellIdentifierForLove";
 NSString * const listViewCellIdentifierForFunny = @"listViewCellIdentifierForFunny";

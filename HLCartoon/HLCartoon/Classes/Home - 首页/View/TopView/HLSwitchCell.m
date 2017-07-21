@@ -16,13 +16,19 @@
     
 }
 
-- (void)setFirstView:(UIView *)firstView {
+- (void)setFirstView:(HLLeftView *)firstView {
     _firstView = firstView;
     [self.contentView addSubview:firstView];
 }
 
-- (void)setSecondView:(UITableView *)secondView {
+- (void)setSecondView:(HLRightView *)secondView {
     _secondView = secondView;
     [self.contentView addSubview:secondView];
+}
+
+- (void)setModel:(HLBookDetailsModel *)model {
+    _model = model;
+    self.firstView.model = model;
+    self.secondView.model = model;
 }
 @end

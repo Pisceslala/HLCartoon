@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class HLRightView;
 @interface HLBottomView : UIView
+
+@property (nonatomic, copy) NSString *ID;
+
+@property (strong,nonatomic) UICollectionView *collectionView;
+
+@property (strong, nonatomic) HLRightView *tableView;
 
 @end

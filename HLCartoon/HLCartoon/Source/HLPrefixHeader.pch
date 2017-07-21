@@ -19,3 +19,4 @@
 #import "UIView+JYDFrame.h"
 #import <MJRefresh.h>
 #import <SVProgressHUD.h>
+#import "UIImage+HLUIImage.h"

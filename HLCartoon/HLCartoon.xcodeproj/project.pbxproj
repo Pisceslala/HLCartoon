@@ -48,6 +48,13 @@
 		23D011E21F1A12F8007968F0 /* HLHorribleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23D011E01F1A12F8007968F0 /* HLHorribleCell.xib */; };
 		23D011E61F1A194F007968F0 /* HLHorribleDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D011E41F1A194F007968F0 /* HLHorribleDetailCell.m */; };
 		23D011E71F1A194F007968F0 /* HLHorribleDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23D011E51F1A194F007968F0 /* HLHorribleDetailCell.xib */; };
+		23E1E1731F218D90001C7AB8 /* HLRightView.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E1E1721F218D90001C7AB8 /* HLRightView.m */; };
+		23E1E1761F219786001C7AB8 /* HLComicsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E1E1751F219786001C7AB8 /* HLComicsModel.m */; };
+		23E1E17A1F219931001C7AB8 /* HLRightViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E1E1781F219931001C7AB8 /* HLRightViewCell.m */; };
+		23E1E17B1F219931001C7AB8 /* HLRightViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23E1E1791F219931001C7AB8 /* HLRightViewCell.xib */; };
+		23E1E1811F21A899001C7AB8 /* HLCartoonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E1E1801F21A899001C7AB8 /* HLCartoonViewController.m */; };
+		23E1E1851F21AE6F001C7AB8 /* HLCartoonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E1E1841F21AE6F001C7AB8 /* HLCartoonCell.m */; };
+		23E1E1881F21B188001C7AB8 /* UIImage+HLUIImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E1E1871F21B188001C7AB8 /* UIImage+HLUIImage.m */; };
 		23FB5E661F20495C00A50F8A /* HLRainbowCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23FB5E651F20495C00A50F8A /* HLRainbowCell.m */; };
 		23FB5E6A1F204E3D00A50F8A /* HLYoungCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23FB5E691F204E3D00A50F8A /* HLYoungCell.m */; };
 		23FB5E6E1F20529400A50F8A /* HLPresidentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23FB5E6D1F20529400A50F8A /* HLPresidentCell.m */; };
@@ -162,6 +169,19 @@
 		23D011E31F1A194F007968F0 /* HLHorribleDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLHorribleDetailCell.h; sourceTree = "<group>"; };
 		23D011E41F1A194F007968F0 /* HLHorribleDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLHorribleDetailCell.m; sourceTree = "<group>"; };
 		23D011E51F1A194F007968F0 /* HLHorribleDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HLHorribleDetailCell.xib; sourceTree = "<group>"; };
+		23E1E1711F218D90001C7AB8 /* HLRightView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLRightView.h; sourceTree = "<group>"; };
+		23E1E1721F218D90001C7AB8 /* HLRightView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLRightView.m; sourceTree = "<group>"; };
+		23E1E1741F219786001C7AB8 /* HLComicsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLComicsModel.h; sourceTree = "<group>"; };
+		23E1E1751F219786001C7AB8 /* HLComicsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLComicsModel.m; sourceTree = "<group>"; };
+		23E1E1771F219931001C7AB8 /* HLRightViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLRightViewCell.h; sourceTree = "<group>"; };
+		23E1E1781F219931001C7AB8 /* HLRightViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLRightViewCell.m; sourceTree = "<group>"; };
+		23E1E1791F219931001C7AB8 /* HLRightViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HLRightViewCell.xib; sourceTree = "<group>"; };
+		23E1E17F1F21A899001C7AB8 /* HLCartoonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLCartoonViewController.h; sourceTree = "<group>"; };
+		23E1E1801F21A899001C7AB8 /* HLCartoonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLCartoonViewController.m; sourceTree = "<group>"; };
+		23E1E1831F21AE6F001C7AB8 /* HLCartoonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLCartoonCell.h; sourceTree = "<group>"; };
+		23E1E1841F21AE6F001C7AB8 /* HLCartoonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLCartoonCell.m; sourceTree = "<group>"; };
+		23E1E1861F21B188001C7AB8 /* UIImage+HLUIImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+HLUIImage.h"; sourceTree = "<group>"; };
+		23E1E1871F21B188001C7AB8 /* UIImage+HLUIImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+HLUIImage.m"; sourceTree = "<group>"; };
 		23FB5E641F20495C00A50F8A /* HLRainbowCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLRainbowCell.h; sourceTree = "<group>"; };
 		23FB5E651F20495C00A50F8A /* HLRainbowCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLRainbowCell.m; sourceTree = "<group>"; };
 		23FB5E681F204E3D00A50F8A /* HLYoungCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLYoungCell.h; sourceTree = "<group>"; };
@@ -409,6 +429,8 @@
 				23FB5E7C1F205D6E00A50F8A /* HLMoreListViewController.m */,
 				23FB5E831F20871200A50F8A /* HLDetailsViewController.h */,
 				23FB5E841F20871200A50F8A /* HLDetailsViewController.m */,
+				23E1E17F1F21A899001C7AB8 /* HLCartoonViewController.h */,
+				23E1E1801F21A899001C7AB8 /* HLCartoonViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -424,6 +446,8 @@
 				23D0119D1F1A0B3F007968F0 /* HLSuggestionModel.m */,
 				23FB5E861F2091D900A50F8A /* HLBookDetailsModel.h */,
 				23FB5E871F2091D900A50F8A /* HLBookDetailsModel.m */,
+				23E1E1741F219786001C7AB8 /* HLComicsModel.h */,
+				23E1E1751F219786001C7AB8 /* HLComicsModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -431,6 +455,7 @@
 		23D0119E1F1A0B3F007968F0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				23E1E1821F21AE48001C7AB8 /* CartoonCell - 漫画页面Cell */,
 				23FB5E891F20956D00A50F8A /* TopView - 头部视图 */,
 				239B4A901F1E08C4001D093F /* BaseView - 基类Cell */,
 				23FB5E771F205A8800A50F8A /* Complete - 完结 */,
@@ -515,6 +540,8 @@
 		23D011BB1F1A0B3F007968F0 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				23E1E1861F21B188001C7AB8 /* UIImage+HLUIImage.h */,
+				23E1E1871F21B188001C7AB8 /* UIImage+HLUIImage.m */,
 				23D011BC1F1A0B3F007968F0 /* UIView+JYDFrame.h */,
 				23D011BD1F1A0B3F007968F0 /* UIView+JYDFrame.m */,
 			);
@@ -568,6 +595,16 @@
 			);
 			name = "HorribleCell - 灵异";
 			path = HorribleCell;
+			sourceTree = "<group>";
+		};
+		23E1E1821F21AE48001C7AB8 /* CartoonCell - 漫画页面Cell */ = {
+			isa = PBXGroup;
+			children = (
+				23E1E1831F21AE6F001C7AB8 /* HLCartoonCell.h */,
+				23E1E1841F21AE6F001C7AB8 /* HLCartoonCell.m */,
+			);
+			name = "CartoonCell - 漫画页面Cell";
+			path = CartoonCell;
 			sourceTree = "<group>";
 		};
 		23FB5E631F20494600A50F8A /* Rainbow - 彩虹 */ = {
@@ -644,6 +681,11 @@
 				23FB5E9D1F20BA7C00A50F8A /* HLSwitchCell.h */,
 				23FB5E9E1F20BA7C00A50F8A /* HLSwitchCell.m */,
 				23FB5E9F1F20BA7C00A50F8A /* HLSwitchCell.xib */,
+				23E1E1711F218D90001C7AB8 /* HLRightView.h */,
+				23E1E1721F218D90001C7AB8 /* HLRightView.m */,
+				23E1E1771F219931001C7AB8 /* HLRightViewCell.h */,
+				23E1E1781F219931001C7AB8 /* HLRightViewCell.m */,
+				23E1E1791F219931001C7AB8 /* HLRightViewCell.xib */,
 			);
 			name = "TopView - 头部视图";
 			path = TopView;
@@ -778,6 +820,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				23D011E71F1A194F007968F0 /* HLHorribleDetailCell.xib in Resources */,
+				23E1E17B1F219931001C7AB8 /* HLRightViewCell.xib in Resources */,
 				23D011C91F1A0B3F007968F0 /* HLFunnyCell.xib in Resources */,
 				23FB5EA11F20BA7C00A50F8A /* HLSwitchCell.xib in Resources */,
 				23D011D11F1A0B3F007968F0 /* HLLoveDetailCell.xib in Resources */,
@@ -870,6 +913,7 @@
 				23FB5E6A1F204E3D00A50F8A /* HLYoungCell.m in Sources */,
 				23D011631F1A0AEC007968F0 /* HLCartoon.xcdatamodeld in Sources */,
 				23D011C51F1A0B3F007968F0 /* HLBannersModel.m in Sources */,
+				23E1E1851F21AE6F001C7AB8 /* HLCartoonCell.m in Sources */,
 				23D011D31F1A0B3F007968F0 /* HLMainTabBarController.m in Sources */,
 				23FB5E721F20561200A50F8A /* HLEnergyCell.m in Sources */,
 				23FB5E7A1F205A9700A50F8A /* HLCompleteCell.m in Sources */,
@@ -889,9 +933,12 @@
 				23FB5E851F20871200A50F8A /* HLDetailsViewController.m in Sources */,
 				23D011D61F1A0B3F007968F0 /* HLSettingViewController.m in Sources */,
 				23D011571F1A0AEC007968F0 /* main.m in Sources */,
+				23E1E1761F219786001C7AB8 /* HLComicsModel.m in Sources */,
+				23E1E1731F218D90001C7AB8 /* HLRightView.m in Sources */,
 				23D011E11F1A12F8007968F0 /* HLHorribleCell.m in Sources */,
 				23D011C21F1A0B3F007968F0 /* AppDelegate.m in Sources */,
 				236C04AC1F1F45F0007DCDED /* HLSchoolCell.m in Sources */,
+				23E1E17A1F219931001C7AB8 /* HLRightViewCell.m in Sources */,
 				239B4AA31F1E09FD001D093F /* HLBaseHeader.m in Sources */,
 				23D011D01F1A0B3F007968F0 /* HLLoveDetailCell.m in Sources */,
 				23D011C81F1A0B3F007968F0 /* HLFunnyCell.m in Sources */,
@@ -906,6 +953,8 @@
 				23FB5E941F20B54700A50F8A /* HLLeftView.m in Sources */,
 				23D011C41F1A0B3F007968F0 /* HLHomeViewController.m in Sources */,
 				23D011D21F1A0B3F007968F0 /* HLMainNavController.m in Sources */,
+				23E1E1811F21A899001C7AB8 /* HLCartoonViewController.m in Sources */,
+				23E1E1881F21B188001C7AB8 /* UIImage+HLUIImage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

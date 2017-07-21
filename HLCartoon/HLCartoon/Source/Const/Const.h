@@ -22,6 +22,8 @@ UIKIT_EXTERN NSString * const SUGGESTION;
 
 UIKIT_EXTERN NSString * const DETAIL;
 
+UIKIT_EXTERN NSString * const COMICE;
+
 
 /**************** CellIdentifiter ***********************/
 UIKIT_EXTERN NSString * const listViewCellIdentifierForLove;

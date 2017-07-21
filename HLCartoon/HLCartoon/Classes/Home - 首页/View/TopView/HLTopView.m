@@ -13,7 +13,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *bgImageView;
 @property (weak, nonatomic) IBOutlet UIButton *contentBtn;
 @property (weak, nonatomic) IBOutlet UIButton *desBtn;
-@property (strong, nonatomic) UIView *lineView;
+
 
 @end
 
@@ -52,6 +52,12 @@
         
         
     }];
+    
+    __weak typeof(self)weakSelf = self;
+    
+    if ([weakSelf.delegate respondsToSelector:@selector(didClickLeftBtn)]) {
+        [weakSelf.delegate didClickLeftBtn];
+    }
 
     
 }
@@ -65,6 +71,11 @@
         
         
     }];
+    
+    __weak typeof(self)weakSelf = self;
+    if ([weakSelf.delegate respondsToSelector:@selector(didClickRightBtn)]) {
+        [weakSelf.delegate didClickRightBtn];
+    }
     
 }
 
