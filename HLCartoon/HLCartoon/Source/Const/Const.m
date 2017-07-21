@@ -32,3 +32,6 @@ NSString * const listViewCellIdentifierForPresident = @"listViewCellIdentifierFo
 NSString * const listViewCellIdentifierForEnergy = @"listViewCellIdentifierForEnergy";
 NSString * const listViewCellIdentifierForColumn = @"listViewCellIdentifierForColumn";
 NSString * const listViewCellIdentifierForComplete = @"listViewCellIdentifierForComplete";
+
+/**************** NotificationName ***********************/
+NSString * const kHomeCellDidClickNotification = @"kHomeCellDidClickNotification";

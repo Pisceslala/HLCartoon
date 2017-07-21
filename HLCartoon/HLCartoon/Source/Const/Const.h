@@ -39,4 +39,7 @@ UIKIT_EXTERN NSString * const listViewCellIdentifierForPresident;
 UIKIT_EXTERN NSString * const listViewCellIdentifierForEnergy;
 UIKIT_EXTERN NSString * const listViewCellIdentifierForColumn;
 UIKIT_EXTERN NSString * const listViewCellIdentifierForComplete;
+
+/**************** NotificationName ***********************/
+UIKIT_EXTERN NSString * const kHomeCellDidClickNotification;
 @end

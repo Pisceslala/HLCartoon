@@ -42,6 +42,9 @@ static int const DEFAULT_REQUEST_TIME_OUT = 20;
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         success(responseObject);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+        [SVProgressHUD showErrorWithStatus:@"加载失败,请检查网络!"];
+        
         if (error) {
             NSLog(@"error = %@",error);
         }

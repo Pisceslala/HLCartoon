@@ -27,7 +27,7 @@
 #import "HLColumnCell.h"
 #import "HLCompleteCell.h"
 #import "HLMoreListViewController.h"
-
+#import "HLDetailsViewController.h"
 typedef NS_ENUM(NSInteger, HeaderViewStyle) {
     HeaderViewStyleLove,        //==> 0
     HeaderViewStyleHorrible,
@@ -74,6 +74,8 @@ typedef NS_ENUM(NSInteger, HeaderViewStyle) {
     [self.view addSubview:self.listView];
     
     [self registerCell];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notificationSelector:) name:kHomeCellDidClickNotification object:nil];
     
 }
 
@@ -278,7 +280,7 @@ typedef NS_ENUM(NSInteger, HeaderViewStyle) {
 }
 
 
-#pragma mark - 数据请求
+#pragma mark - 数据请求(轮播图数据)
 - (void)loadBannersData {
     
     [[HLSessionManager shareHLSessionManager] GET:BANNERS parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -314,6 +316,18 @@ typedef NS_ENUM(NSInteger, HeaderViewStyle) {
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"请求失败 : %@",error);
     }];
+    
+}
+
+#pragma mark - 接收消息执行方法
+- (void)notificationSelector:(NSNotification *)notifitce {
+    NSDictionary *dict = notifitce.object;
+    
+    HLDetailsViewController *vc = [[HLDetailsViewController alloc] init];
+    vc.ID = dict[@"ID"];
+    vc.imageURL = dict[@"imageURL"];
+    
+    [self.navigationController pushViewController:vc animated:YES];
     
 }
 

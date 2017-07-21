@@ -64,6 +64,14 @@
     return cell;
 }
 
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    HLDetailModel *model = self.dataArray[indexPath.row];
+    
+    NSDictionary *dict = @{@"ID": model.ID, @"imageURL": model.cover_image_url};
+    //发送通知跳转
+    [[NSNotificationCenter defaultCenter] postNotificationName:kHomeCellDidClickNotification object:dict];
+
+}
 
 #pragma mark - GET
 - (UICollectionView *)collectView {
