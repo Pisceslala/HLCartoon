@@ -7,31 +7,80 @@
 //
 
 #import "HLBookRackViewController.h"
+#import "HLBaseCollectionCell.h"
+#import "HLBookRackModel.h"
+@interface HLBookRackViewController ()<UICollectionViewDelegate, UICollectionViewDataSource>
 
-@interface HLBookRackViewController ()
+@property (nonatomic, strong) UICollectionView *collectionView;
+
+@property (strong, nonatomic) NSMutableArray *dataArray;
 
 @end
 
 @implementation HLBookRackViewController
 
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    NSMutableArray *array = [[PINCache sharedCache] objectForKey:historyBookKey];
+    self.dataArray = [HLBookRackModel mj_objectArrayWithKeyValuesArray:array];
+
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.view.backgroundColor = [UIColor whiteColor];
+    [self configViews];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)configViews {
+    
+    
+    [self.view addSubview:self.collectionView];
+    
+    [self.collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([HLBaseCollectionCell class]) bundle:nil] forCellWithReuseIdentifier:@"bookeRackCell"];
+    
+    
 }
 
-/*
-#pragma mark - Navigation
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    return self.dataArray.count;
 }
-*/
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    HLBaseCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"bookeRackCell" forIndexPath:indexPath];
+    
+    cell.model = self.dataArray[indexPath.row];
+    
+    return cell;
+}
+
+#pragma mark - GET
+- (UICollectionView *)collectionView {
+    if (!_collectionView) {
+        
+        UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
+        flow.itemSize = CGSizeMake(SSScreenW / 3.0 - 10, (SSScreenH - 64 - 49) / 3.0);
+        flow.minimumLineSpacing = 0;
+        flow.minimumInteritemSpacing = 3;
+        UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, SSScreenW, SSScreenH - 49) collectionViewLayout:flow];
+        collectionView.backgroundColor = [UIColor whiteColor];
+        collectionView.delegate = self;
+        collectionView.dataSource = self;
+        _collectionView = collectionView;
+        
+    }
+    return _collectionView;
+}
+
+- (NSMutableArray *)dataArray {
+    if (!_dataArray) {
+        _dataArray = [NSMutableArray array];
+    }
+    return _dataArray;
+}
+
 
 @end

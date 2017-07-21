@@ -44,4 +44,5 @@ UIKIT_EXTERN NSString * const listViewCellIdentifierForComplete;
 UIKIT_EXTERN NSString * const kHomeCellDidClickNotification;
 
 UIKIT_EXTERN NSString * const NetWorkTipsKey;
+UIKIT_EXTERN NSString * const historyBookKey;
 @end

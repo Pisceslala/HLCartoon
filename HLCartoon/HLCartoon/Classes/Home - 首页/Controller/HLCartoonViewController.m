@@ -11,6 +11,8 @@
 #import "HLCartoonCell.h"
 @interface HLCartoonViewController ()
 @property (strong, nonatomic) NSMutableArray *dataArray;
+
+@property (strong, nonatomic) NSMutableArray *historyArray;
 @end
 
 @implementation HLCartoonViewController
@@ -86,7 +88,7 @@
 
 - (void)loadCartoonImageByID:(NSString *)ID {
     NSString *URL = [NSString stringWithFormat:@"%@/%@",COMICE,ID];
-    
+    NSLog(@"%@",URL);
     [[HLSessionManager shareHLSessionManager] GET:URL parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         HLCartoonModel *model = [HLCartoonModel mj_objectWithKeyValues:responseObject[@"data"]];
@@ -95,11 +97,36 @@
             [self.dataArray addObject:imageURL];
         }
         
+        [self cacaheHistoryBook:responseObject[@"data"][@"topic"]]; //缓存到书架
+        
         [self.tableView reloadData];
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
     }];
+}
+
+- (void)cacaheHistoryBook:(NSDictionary *)dict {
+    
+    NSMutableArray *array = [[PINCache sharedCache] objectForKey:historyBookKey];
+    
+    for (NSDictionary *ardict in array) {
+        if ([dict[@"title"] isEqualToString:ardict[@"dict"]]) {
+            return;
+        }
+    }
+    
+    if (array.count == 0) {
+        
+        [self.historyArray addObject:dict];
+        
+        [[PINCache sharedCache] setObject:self.historyArray forKey:historyBookKey];
+    }else {
+        [array addObject:dict];
+        
+        [[PINCache sharedCache] setObject:array forKey:historyBookKey];
+    }
+    
 }
 
 #pragma mark - get
@@ -112,6 +139,11 @@
     return _dataArray;
 }
 
-
+- (NSMutableArray *)historyArray {
+    if (!_historyArray) {
+        _historyArray = [NSMutableArray array];
+    }
+    return _historyArray;
+}
 
 @end

@@ -38,3 +38,4 @@ NSString * const kHomeCellDidClickNotification = @"kHomeCellDidClickNotification
 
 
 NSString * const NetWorkTipsKey = @"NetWorkTipsKey";
+NSString * const historyBookKey = @"historyBookKey";
