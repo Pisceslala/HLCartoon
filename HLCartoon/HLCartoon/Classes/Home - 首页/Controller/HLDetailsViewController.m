@@ -62,7 +62,7 @@
 #pragma mark - Set
 - (void)setID:(NSString *)ID {
     _ID = ID;
-    NSLog(@"漫画id = %@",ID);
+
     self.bottomView.ID = ID;
 }
 

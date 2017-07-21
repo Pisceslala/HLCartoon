@@ -7,8 +7,10 @@
 //
 
 #import "HLSettingViewController.h"
-
+#import "ClearCacheTool.h"
 @interface HLSettingViewController ()
+
+@property (strong, nonatomic) UISwitch *switchBtn;
 
 @end
 
@@ -17,11 +19,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,67 +29,102 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+
+    return 1;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     
-    // Configure the cell...
+    if (cell==nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"cell"];
+    }
+    
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
+    if (indexPath.section == 0) {
+        
+        cell.textLabel.text = @"移动网络下载阅读/下载提醒";
+        
+        cell.accessoryView = self.switchBtn;
+        
+    }else {
+       
+        cell.textLabel.text = @"清理缓存";
+        
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"%.2lfM",[[SDImageCache sharedImageCache] getSize]/1024.0/1024.0];
+    
+    }
     
     return cell;
 }
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == 1) {
+        [AlertControllerTool alertDestructionTitle:@"提示" Mesasge:@"是否清空缓存?" sureTitle:@"确定" cancelTitle:@"取消" confirmHandler:^(UIAlertAction *action) {
+            
+            [SVProgressHUD showWithStatus:@"正在清理..."];
+            
+            [[SDImageCache sharedImageCache] clearMemory];
+            
+            [[SDImageCache sharedImageCache] clearDiskOnCompletion:^{
+            
+                [SVProgressHUD dismiss];
+                
+                [SVProgressHUD showSuccessWithStatus:@"清理完成!"];
+            
+            }];
+            [self.tableView reloadData];
+
+            
+        } cancleHandler:^(UIAlertAction *action) {
+            
+        }];
+    }
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+#pragma mark - 开关按钮点击
+- (void)saveSwitchStatus:(UISwitch *)switchBtn {
+    
+    //使用偏好设置保存值
+    NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
+    
+    [def setBool:switchBtn.isOn forKey:NetWorkTipsKey];
+    
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
 }
-*/
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+-(CGFloat)tableView:(UITableView*)tableView heightForFooterInSection:(NSInteger)section {
+    
+    return 5.0;
+    
 }
-*/
 
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
+- (UISwitch *)switchBtn {
+    
+    if (_switchBtn == nil) {
+        
+        _switchBtn = [[UISwitch alloc] init];
+        
+        NSString *status = [[NSUserDefaults standardUserDefaults] objectForKey:NetWorkTipsKey];
+        
+        [_switchBtn setOn:[status integerValue]];
+        
+        [_switchBtn addTarget:self action:@selector(saveSwitchStatus:) forControlEvents:UIControlEventValueChanged];
+        
+    }
+    return _switchBtn;
 }
-*/
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)dealloc {
+    NSLog(@"dealloc");
 }
-*/
-
 @end

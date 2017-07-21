@@ -55,6 +55,8 @@
 		23E1E1811F21A899001C7AB8 /* HLCartoonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E1E1801F21A899001C7AB8 /* HLCartoonViewController.m */; };
 		23E1E1851F21AE6F001C7AB8 /* HLCartoonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E1E1841F21AE6F001C7AB8 /* HLCartoonCell.m */; };
 		23E1E1881F21B188001C7AB8 /* UIImage+HLUIImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E1E1871F21B188001C7AB8 /* UIImage+HLUIImage.m */; };
+		23E1E18C1F21D728001C7AB8 /* AlertControllerTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E1E18B1F21D728001C7AB8 /* AlertControllerTool.m */; };
+		23E1E1901F21F1D5001C7AB8 /* ClearCacheTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 23E1E18F1F21F1D5001C7AB8 /* ClearCacheTool.m */; };
 		23FB5E661F20495C00A50F8A /* HLRainbowCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23FB5E651F20495C00A50F8A /* HLRainbowCell.m */; };
 		23FB5E6A1F204E3D00A50F8A /* HLYoungCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23FB5E691F204E3D00A50F8A /* HLYoungCell.m */; };
 		23FB5E6E1F20529400A50F8A /* HLPresidentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23FB5E6D1F20529400A50F8A /* HLPresidentCell.m */; };
@@ -182,6 +184,10 @@
 		23E1E1841F21AE6F001C7AB8 /* HLCartoonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLCartoonCell.m; sourceTree = "<group>"; };
 		23E1E1861F21B188001C7AB8 /* UIImage+HLUIImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+HLUIImage.h"; sourceTree = "<group>"; };
 		23E1E1871F21B188001C7AB8 /* UIImage+HLUIImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+HLUIImage.m"; sourceTree = "<group>"; };
+		23E1E18A1F21D728001C7AB8 /* AlertControllerTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertControllerTool.h; sourceTree = "<group>"; };
+		23E1E18B1F21D728001C7AB8 /* AlertControllerTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertControllerTool.m; sourceTree = "<group>"; };
+		23E1E18E1F21F1D5001C7AB8 /* ClearCacheTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClearCacheTool.h; sourceTree = "<group>"; };
+		23E1E18F1F21F1D5001C7AB8 /* ClearCacheTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClearCacheTool.m; sourceTree = "<group>"; };
 		23FB5E641F20495C00A50F8A /* HLRainbowCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLRainbowCell.h; sourceTree = "<group>"; };
 		23FB5E651F20495C00A50F8A /* HLRainbowCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLRainbowCell.m; sourceTree = "<group>"; };
 		23FB5E681F204E3D00A50F8A /* HLYoungCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLYoungCell.h; sourceTree = "<group>"; };
@@ -378,8 +384,8 @@
 				23D011B11F1A0B3F007968F0 /* Main */,
 				23D0118F1F1A0B3F007968F0 /* Bookrack - 书架 */,
 				23D011931F1A0B3F007968F0 /* Home - 首页 */,
-				23D011BA1F1A0B3F007968F0 /* Other */,
 				23D011BE1F1A0B3F007968F0 /* Setting - 设置 */,
+				23D011BA1F1A0B3F007968F0 /* Other */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -523,6 +529,8 @@
 		23D011B71F1A0B3F007968F0 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				23E1E1891F21D728001C7AB8 /* AlertControllerTool */,
+				23E1E18D1F21F1D5001C7AB8 /* ClearCacheTool */,
 				23D011B81F1A0B3F007968F0 /* HLSessionManager.h */,
 				23D011B91F1A0B3F007968F0 /* HLSessionManager.m */,
 			);
@@ -605,6 +613,24 @@
 			);
 			name = "CartoonCell - 漫画页面Cell";
 			path = CartoonCell;
+			sourceTree = "<group>";
+		};
+		23E1E1891F21D728001C7AB8 /* AlertControllerTool */ = {
+			isa = PBXGroup;
+			children = (
+				23E1E18A1F21D728001C7AB8 /* AlertControllerTool.h */,
+				23E1E18B1F21D728001C7AB8 /* AlertControllerTool.m */,
+			);
+			path = AlertControllerTool;
+			sourceTree = "<group>";
+		};
+		23E1E18D1F21F1D5001C7AB8 /* ClearCacheTool */ = {
+			isa = PBXGroup;
+			children = (
+				23E1E18E1F21F1D5001C7AB8 /* ClearCacheTool.h */,
+				23E1E18F1F21F1D5001C7AB8 /* ClearCacheTool.m */,
+			);
+			path = ClearCacheTool;
 			sourceTree = "<group>";
 		};
 		23FB5E631F20494600A50F8A /* Rainbow - 彩虹 */ = {
@@ -931,6 +957,7 @@
 				23D011E61F1A194F007968F0 /* HLHorribleDetailCell.m in Sources */,
 				23FB5E911F20B33900A50F8A /* HLBottomView.m in Sources */,
 				23FB5E851F20871200A50F8A /* HLDetailsViewController.m in Sources */,
+				23E1E18C1F21D728001C7AB8 /* AlertControllerTool.m in Sources */,
 				23D011D61F1A0B3F007968F0 /* HLSettingViewController.m in Sources */,
 				23D011571F1A0AEC007968F0 /* main.m in Sources */,
 				23E1E1761F219786001C7AB8 /* HLComicsModel.m in Sources */,
@@ -940,6 +967,7 @@
 				236C04AC1F1F45F0007DCDED /* HLSchoolCell.m in Sources */,
 				23E1E17A1F219931001C7AB8 /* HLRightViewCell.m in Sources */,
 				239B4AA31F1E09FD001D093F /* HLBaseHeader.m in Sources */,
+				23E1E1901F21F1D5001C7AB8 /* ClearCacheTool.m in Sources */,
 				23D011D01F1A0B3F007968F0 /* HLLoveDetailCell.m in Sources */,
 				23D011C81F1A0B3F007968F0 /* HLFunnyCell.m in Sources */,
 				23D011D41F1A0B3F007968F0 /* HLSessionManager.m in Sources */,

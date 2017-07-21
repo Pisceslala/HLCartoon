@@ -21,6 +21,33 @@
     self.automaticallyAdjustsScrollViewInsets = NO;
     
     self.navigationController.navigationBar.hidden = YES;
+    
+    //移动网络下载提示是否打开
+    NSUserDefaults *def  = [NSUserDefaults standardUserDefaults];
+    NSString *showStatus = [def objectForKey:NetWorkTipsKey];
+    if ([showStatus integerValue]) {
+        [self netWorkStatus]; //当前网络状态
+    }
+    
+    
+}
+
+- (void)netWorkStatus {
+    
+    //获取网络状态
+    if ([[HLSessionManager networkingStatesFromStatebar] isEqualToString:@"notReachable"]) {
+        [AlertControllerTool alertSingleActionAtTitle:@"提示" message:@"当前网络不可用" actionTitle:@"返回" confirmHandler:^(UIAlertAction *action) {
+            [self.navigationController popViewControllerAnimated:YES];
+        }];
+    }else if ([[HLSessionManager networkingStatesFromStatebar] isEqualToString:@"2G"]
+              || [[HLSessionManager networkingStatesFromStatebar] isEqualToString:@"3G"]
+              || [[HLSessionManager networkingStatesFromStatebar] isEqualToString:@"4G"]) {
+        
+        [AlertControllerTool alertSingleActionAtTitle:@"提示" message:@"当前使用移动网络,请注意流量~" actionTitle:@"确定" confirmHandler:^(UIAlertAction *action) {
+            
+        }];
+        
+    }
 }
 
 - (void)viewDidLoad {

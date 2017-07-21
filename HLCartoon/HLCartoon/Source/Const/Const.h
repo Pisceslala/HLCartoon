@@ -42,4 +42,6 @@ UIKIT_EXTERN NSString * const listViewCellIdentifierForComplete;
 
 /**************** NotificationName ***********************/
 UIKIT_EXTERN NSString * const kHomeCellDidClickNotification;
+
+UIKIT_EXTERN NSString * const NetWorkTipsKey;
 @end

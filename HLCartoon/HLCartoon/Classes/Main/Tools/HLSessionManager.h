@@ -25,4 +25,6 @@
     success:(nullable void (^)(id _Nullable responseObject))success
     failure:(nullable void (^)(NSError * _Nullable error))failure;
 
++ (NSString *_Nullable)networkingStatesFromStatebar;
+
 @end

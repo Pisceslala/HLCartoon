@@ -35,3 +35,6 @@ NSString * const listViewCellIdentifierForComplete = @"listViewCellIdentifierFor
 
 /**************** NotificationName ***********************/
 NSString * const kHomeCellDidClickNotification = @"kHomeCellDidClickNotification";
+
+
+NSString * const NetWorkTipsKey = @"NetWorkTipsKey";
