@@ -13,6 +13,8 @@
 @property (strong, nonatomic) NSMutableArray *dataArray;
 
 @property (strong, nonatomic) NSMutableArray *historyArray;
+
+@property (assign, nonatomic) CGFloat rowHight;
 @end
 
 @implementation HLCartoonViewController
@@ -58,7 +60,7 @@
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.tableView registerClass:[HLCartoonCell class] forCellReuseIdentifier:@"cartoonCell"];
     self.tableView.backgroundColor = [UIColor blackColor];
-    self.tableView.rowHeight = 293;
+    
 }
 
 
@@ -73,11 +75,15 @@
     
     cell.imageURL = self.dataArray[indexPath.row];
     
+    self.rowHight = cell.pageView.JYD_Size.height;
+    
     return cell;
 }
 
 
-
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return self.rowHight;
+}
 
 #pragma mark - SET
 - (void)setID:(NSString *)ID {
@@ -88,7 +94,7 @@
 
 - (void)loadCartoonImageByID:(NSString *)ID {
     NSString *URL = [NSString stringWithFormat:@"%@/%@",COMICE,ID];
-    NSLog(@"%@",URL);
+ 
     [[HLSessionManager shareHLSessionManager] GET:URL parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         HLCartoonModel *model = [HLCartoonModel mj_objectWithKeyValues:responseObject[@"data"]];
@@ -109,12 +115,15 @@
 - (void)cacaheHistoryBook:(NSDictionary *)dict {
     
     NSMutableArray *array = [[PINCache sharedCache] objectForKey:historyBookKey];
-    
-    for (NSDictionary *ardict in array) {
-        if ([dict[@"title"] isEqualToString:ardict[@"dict"]]) {
+
+    //查重
+    for (NSDictionary *hisDict in array) {
+        
+        if ([dict[@"title"] isEqualToString:hisDict[@"title"]]) {
             return;
         }
     }
+    
     
     if (array.count == 0) {
         
@@ -122,13 +131,15 @@
         
         [[PINCache sharedCache] setObject:self.historyArray forKey:historyBookKey];
     }else {
-        [array addObject:dict];
         
+        [array addObject:dict];
+                
         [[PINCache sharedCache] setObject:array forKey:historyBookKey];
     }
-    
-}
 
+    //[[PINCache sharedCache] removeAllObjects];
+
+}
 #pragma mark - get
 - (NSMutableArray *)dataArray {
     if (!_dataArray) {

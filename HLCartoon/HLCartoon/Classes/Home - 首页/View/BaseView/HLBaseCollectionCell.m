@@ -31,4 +31,14 @@
     }];
 }
 
+- (void)setBookModel:(HLBookRackModel *)bookModel {
+    _bookModel = bookModel;
+    
+    self.baseTitle.text = bookModel.title;
+    
+    [self.baseImageView sd_setImageWithURL:[NSURL URLWithString:bookModel.vertical_image_url] completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+        
+    }];
+}
+
 @end

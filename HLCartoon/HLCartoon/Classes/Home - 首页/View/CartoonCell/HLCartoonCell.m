@@ -40,6 +40,8 @@
         
         self.pageView.JYD_Size = newImage.size;
         
+        
+        
     }];
     
     
@@ -47,9 +49,10 @@
 
 - (UIImageView *)pageView {
     if (!_pageView) {
-        _pageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SSScreenW, SSScreenH)];
+        _pageView = [[UIImageView alloc] initWithFrame:[UIScreen mainScreen].bounds];
         _pageView.backgroundColor = [UIColor blackColor];
         [self.contentView addSubview:_pageView];
+       
     }
     return _pageView;
 }

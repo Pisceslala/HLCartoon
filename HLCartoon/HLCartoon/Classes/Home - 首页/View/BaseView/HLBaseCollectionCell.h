@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "HLDetailModel.h"
+#import "HLBookRackModel.h"
 @interface HLBaseCollectionCell : UICollectionViewCell
 
 @property (strong, nonatomic) HLDetailModel *model;
+
+@property (strong, nonatomic) HLBookRackModel *bookModel;
 
 @end

@@ -24,7 +24,7 @@
     
     NSMutableArray *array = [[PINCache sharedCache] objectForKey:historyBookKey];
     self.dataArray = [HLBookRackModel mj_objectArrayWithKeyValuesArray:array];
-
+    [self.collectionView reloadData];
 }
 
 - (void)viewDidLoad {
@@ -52,7 +52,7 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     HLBaseCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"bookeRackCell" forIndexPath:indexPath];
     
-    cell.model = self.dataArray[indexPath.row];
+    cell.bookModel = self.dataArray[indexPath.row];
     
     return cell;
 }
@@ -67,6 +67,7 @@
         flow.minimumInteritemSpacing = 3;
         UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, SSScreenW, SSScreenH - 49) collectionViewLayout:flow];
         collectionView.backgroundColor = [UIColor whiteColor];
+        collectionView.contentInset = UIEdgeInsetsMake(5, 5, 5, 5);
         collectionView.delegate = self;
         collectionView.dataSource = self;
         _collectionView = collectionView;
