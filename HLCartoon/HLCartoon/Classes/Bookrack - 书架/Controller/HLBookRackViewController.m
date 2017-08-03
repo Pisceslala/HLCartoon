@@ -9,6 +9,7 @@
 #import "HLBookRackViewController.h"
 #import "HLBaseCollectionCell.h"
 #import "HLBookRackModel.h"
+#import "HLDetailsViewController.h"
 @interface HLBookRackViewController ()<UICollectionViewDelegate, UICollectionViewDataSource>
 
 @property (nonatomic, strong) UICollectionView *collectionView;
@@ -55,6 +56,17 @@
     cell.bookModel = self.dataArray[indexPath.row];
     
     return cell;
+}
+
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    HLBookRackModel *model = self.dataArray[indexPath.row];
+    
+    HLDetailsViewController *vc = [[HLDetailsViewController alloc] init];
+    vc.ID = model.ID;
+    vc.imageURL = model.cover_image_url;
+    [self.navigationController pushViewController:vc animated:YES];
+    
 }
 
 #pragma mark - GET
