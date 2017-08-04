@@ -10,7 +10,7 @@
 #import "HLBaseCollectionCell.h"
 #import "HLBookRackModel.h"
 #import "HLDetailsViewController.h"
-@interface HLBookRackViewController ()<UICollectionViewDelegate, UICollectionViewDataSource>
+@interface HLBookRackViewController ()<UICollectionViewDelegate, UICollectionViewDataSource,HLBaseCollectionCellDelegate>
 
 @property (nonatomic, strong) UICollectionView *collectionView;
 
@@ -54,6 +54,8 @@
     HLBaseCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"bookeRackCell" forIndexPath:indexPath];
     
     cell.bookModel = self.dataArray[indexPath.row];
+    cell.delegate = self;
+    [cell addGesturesForItem];
     
     return cell;
 }
@@ -67,6 +69,24 @@
     vc.imageURL = model.cover_image_url;
     [self.navigationController pushViewController:vc animated:YES];
     
+}
+
+
+- (void)didEditCellItem:(HLBaseCollectionCell *)cell {
+    [AlertControllerTool alertShootActionAtTitle:@"提示" message:@"是否删除漫画" sureTitle:@"残忍删除" cancelTitle:@"取消" confirmHandler:^(UIAlertAction *action) {
+        [self deleteCell:cell];
+    } cancelHandler:^(UIAlertAction *action) {
+        
+    }];
+}
+
+- (void)deleteCell:(HLBaseCollectionCell *)cell {
+    NSIndexPath *indexPath = [self.collectionView indexPathForCell:cell];
+    [self.dataArray removeObjectAtIndex:indexPath.row];
+    NSMutableArray *array = [HLBookRackModel mj_keyValuesArrayWithObjectArray:self.dataArray];
+    //更新缓存
+    [[PINCache sharedCache] setObject:array forKey:historyBookKey];
+    [self.collectionView reloadData];
 }
 
 #pragma mark - GET
@@ -83,6 +103,7 @@
         collectionView.delegate = self;
         collectionView.dataSource = self;
         _collectionView = collectionView;
+        
         
     }
     return _collectionView;

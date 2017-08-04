@@ -41,4 +41,20 @@
     }];
 }
 
+
+
+- (void)addGesturesForItem {
+    UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(editItems:)];
+    longPress.minimumPressDuration = 0.5;
+    [self.contentView addGestureRecognizer:longPress];
+}
+
+- (void)editItems:(UILongPressGestureRecognizer *)longPress {
+    __weak typeof(self)weakSelf = self;
+    if (longPress.state == UIGestureRecognizerStateBegan) {
+        if ([weakSelf.delegate respondsToSelector:@selector(didEditCellItem:)]) {
+            [weakSelf.delegate didEditCellItem:self];
+        }
+    }
+}
 @end
